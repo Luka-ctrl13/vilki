@@ -21,7 +21,7 @@ function fixture() {
       handicaps: [{ param1: 1.5, kf1: 2.3, param2: -1.5, kf2: 1.6 }],
     },
   ];
-  return { fonbet, olimp };
+  return { fonbet, olimp, leon: [] };
 }
 
 test("finds a totals surebet on matching line", () => {
@@ -53,7 +53,8 @@ test("handicap fork respects reversed teams and complementary lines", () => {
 test("no forks when events do not match", () => {
   server._setData({
     fonbet: [{ team1: "A", team2: "B", totals: [{ val: 2.5, over: 2.1, under: 2.1 }], handicaps: [] }],
-    olimp: [{ team1: "C", team2: "D", totals: [{ val: 2.5, over: 2.1, under: 2.1 }], handicaps: [] }],
+    olimp:  [{ team1: "C", team2: "D", totals: [{ val: 2.5, over: 2.1, under: 2.1 }], handicaps: [] }],
+    leon:   [],
   });
   assert.equal(server.findForks().length, 0);
 });

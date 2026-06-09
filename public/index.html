@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Surebet Scanner — Fonbet × Olimp</title>
+<title>Surebet Scanner — Fonbet × Olimp × Leon</title>
 <style>
-  :root{--bg:#0e1320;--pan:#161d2e;--pan2:#1d2740;--line:#2a3552;--mut:#8a97b3;--acc:#36d399;--acc2:#5b8cff;--live:#ff5b7f;--warn:#f5c451}
+  :root{--bg:#0e1320;--pan:#161d2e;--pan2:#1d2740;--line:#2a3552;--mut:#8a97b3;--acc:#36d399;--acc2:#5b8cff;--live:#ff5b7f;--warn:#f5c451;--acc3:#ff9f43}
   *{box-sizing:border-box}
   body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:#e7ecf6;margin:0;padding:18px}
   h1{margin:0;font-size:22px}
   .top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
   .stats{display:flex;gap:10px;margin-left:auto}
-  .stat{background:var(--pan);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center;min-width:90px}
+  .stat{background:var(--pan);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center;min-width:80px}
   .stat b{font-size:20px;display:block}
   .stat span{font-size:11px;color:var(--mut)}
   .bank{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:10px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;color:var(--mut);font-size:13px}
   .bank input{background:var(--pan2);border:1px solid var(--line);color:#fff;border-radius:8px;padding:7px 10px;width:140px}
-  .grid{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:16px}
+  .grid{display:grid;grid-template-columns:1fr 1.6fr 1fr 1fr;gap:12px}
   .col{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:12px;height:80vh;overflow-y:auto}
   .col-title{text-align:center;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;font-size:15px}
   .raw{padding:7px 4px;border-bottom:1px solid #222c44;font-size:12px;color:#abb6d0;display:flex;justify-content:space-between;gap:8px}
   .tag{background:var(--pan2);padding:1px 6px;border-radius:4px;color:var(--warn);font-size:11px;display:inline-block;margin:1px 0}
   .fork{background:var(--pan2);border-left:4px solid #555;border-radius:8px;padding:11px;margin-bottom:9px}
-  .fork.plus{border-left-color:var(--acc)} .fork.minus{border-left-color:var(--live)}
+  .fork.plus{border-left-color:var(--acc)} .fork.minus{border-left-color:var(--live)} .fork.near{border-left-color:var(--warn)}
   .fork-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
   .fork-m{font-size:12px;color:var(--mut);margin:3px 0}
-  .prof{font-weight:800} .prof.p{color:var(--acc)} .prof.n{color:var(--live)}
-  .leg{display:grid;grid-template-columns:58px 1fr auto auto auto;gap:10px;align-items:center;font-size:13px;background:#16203a;border-radius:7px;padding:7px 9px;margin-top:6px}
+  .prof{font-weight:800} .prof.p{color:var(--acc)} .prof.n{color:var(--live)} .prof.nr{color:var(--warn)}
+  .leg{display:grid;grid-template-columns:52px 1fr auto auto auto;gap:8px;align-items:center;font-size:13px;background:#16203a;border-radius:7px;padding:7px 9px;margin-top:6px}
   .leg b{color:var(--acc2)} .leg .k{font-weight:700} .leg .st{font-weight:700;color:var(--acc);text-align:right}
   .go{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#04121d;border:0;border-radius:7px;padding:6px 12px;font-weight:700;cursor:pointer;font-size:12px;text-decoration:none;display:inline-block}
   .fork-f{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;margin-top:7px}
@@ -39,17 +39,19 @@
     <div class="stat"><b id="cfb">0</b><span>Fonbet</span></div>
     <div class="stat"><b id="cf" style="color:var(--acc)">0</b><span>Вилок</span></div>
     <div class="stat"><b id="col">0</b><span>Olimp</span></div>
+    <div class="stat"><b id="cln">0</b><span>Leon</span></div>
   </div>
 </div>
 
 <div class="bank">Банк, ₽ <input type="number" id="bank" value="10000" oninput="renderForks()">
-  <span>— суммы на каждую ставку считаются автоматически. «Перейти» открывает именно этот матч.</span>
+  <span>— суммы считаются автоматически. Сравниваются все пары: Fonbet×Olimp, Leon×Olimp, Fonbet×Leon.</span>
 </div>
 
 <div class="grid">
   <div class="col"><div class="col-title" style="color:var(--acc2)">Fonbet</div><div id="lfb"></div></div>
   <div class="col"><div class="col-title" style="color:var(--acc)">Вилки</div><div id="lf"></div></div>
   <div class="col"><div class="col-title" style="color:var(--live)">Olimp</div><div id="lol"></div></div>
+  <div class="col"><div class="col-title" style="color:var(--acc3)">Leon</div><div id="lln"></div></div>
 </div>
 
 <script>
@@ -65,16 +67,18 @@ async function tick(){
     forks = f;
     document.getElementById('cfb').innerText = all.fonbetCount;
     document.getElementById('col').innerText = all.olimpCount;
+    document.getElementById('cln').innerText = all.leonCount;
     document.getElementById('cf').innerText = f.length;
     document.getElementById('lfb').innerHTML = (all.fonbet||[]).map(rawRow).join('') || muted('нет данных');
     document.getElementById('lol').innerHTML = (all.olimp||[]).map(rawRow).join('') || muted('нет данных');
+    document.getElementById('lln').innerHTML = (all.leon||[]).map(rawRow).join('') || muted('нет данных');
     renderForks();
   }catch(e){}
 }
 
 function rawRow(e){
   let c='';
-  (e.totals||[]).slice(0,2).forEach(t=>c+=`<span class="tag">Т(${t.val}) ${t.over}/${t.under}</span> `);
+  (e.totals||[]).slice(0,3).forEach(t=>c+=`<span class="tag">Т(${t.val}) ${t.over}/${t.under}</span> `);
   (e.handicaps||[]).slice(0,2).forEach(h=>c+=`<span class="tag">Ф(${h.param1}/${h.param2}) ${h.kf1}/${h.kf2}</span> `);
   return `<div class="raw"><div style="max-width:45%">${e.team1}<br>${e.team2}</div><div style="text-align:right">${c||'<span style="color:#556">—</span>'}</div></div>`;
 }
@@ -82,7 +86,9 @@ function rawRow(e){
 function renderForks(){
   const bank = +document.getElementById('bank').value || 10000;
   document.getElementById('lf').innerHTML = forks.map(f=>{
-    const p = +f.profit, cls = p>0?'plus':'minus';
+    const p = +f.profit;
+    const cls = p > 0 ? 'plus' : p > -1.5 ? 'near' : 'minus';
+    const profCls = p > 0 ? 'p' : p > -1.5 ? 'nr' : 'n';
     const [k1,k2] = f.legs.map(l=>l.odd);
     const idx = 1/k1 + 1/k2;
     const stakes = f.legs.map(l => Math.round((bank*(1/l.odd))/idx));
@@ -92,14 +98,15 @@ function renderForks(){
         <span class="st">${stakes[i]} ₽</span>
         <a class="go" href="${l.link}" target="_blank" rel="noreferrer">Перейти →</a>
       </div>`).join('');
+    const label = p > 0 ? '+' + f.profit + '%' : f.profit + '%';
     return `<div class="fork ${cls}">
       <div class="fork-h"><div style="font-weight:700">${f.match}</div>
-        <span class="prof ${p>0?'p':'n'}">${p>0?'+':''}${f.profit}%</span></div>
+        <span class="prof ${profCls}">${label}</span></div>
       <div class="fork-m">${f.sport||''} · ${f.market}</div>
       ${legs}
-      <div class="fork-f"><span>индекс ${f.index}</span><span>банк ${bank} ₽ · профит ${Math.round(bank*(p/100))} ₽</span></div>
+      <div class="fork-f"><span>индекс ${f.index}</span><span>банк ${bank} ₽${p>0?' · профит '+Math.round(bank*(p/100))+' ₽':''}</span></div>
     </div>`;
-  }).join('') || muted('вилок нет (нужны оба букмекера)');
+  }).join('') || muted('вилок не найдено');
 }
 
 const muted = t=>`<div style="color:#556;text-align:center;padding:20px">${t}</div>`;
