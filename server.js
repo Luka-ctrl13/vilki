@@ -6,8 +6,6 @@ const parser1xbet = require("./scrapers/parser1xbet");
 const parserOlimp = require("./scrapers/parserOlimp");
 const { sameEvent } = require("./lib/match");
 const arb = require("./lib/arb");
-const { Coordinator } = require("./betting/coordinator");
-const { Placer } = require("./betting/placer");
 
 const app = express();
 app.use(cors());
@@ -22,9 +20,6 @@ const MIN_DISPLAY_PROFIT = Number(process.env.MIN_DISPLAY_PROFIT || 0); // show 
 let liveData = { xbet: [], olimp: [] };
 let lastForks = [];
 let busy = { xbet: false, olimp: false };
-
-const placer = new Placer();
-const coordinator = new Coordinator(placer);
 
 // ----------------------------- scraping loop ------------------------------ //
 function startScraping() {
@@ -174,22 +169,6 @@ app.get("/api/all-events", (req, res) =>
     olimp: liveData.olimp,
   })
 );
-
-app.get("/api/betting/status", (req, res) => res.json(coordinator.status()));
-
-app.post("/api/betting/toggle", (req, res) => {
-  coordinator.risk.enabled = !!req.body.enabled;
-  res.json(coordinator.status());
-});
-
-app.post("/api/betting/place", async (req, res) => {
-  const fork = lastForks.find((f) => f.id === req.body.forkId);
-  if (!fork) return res.json({ error: "вилка не найдена или устарела", forkId: req.body.forkId });
-  const bet = await coordinator.placeFork(fork, req.body.stake);
-  res.json(bet);
-});
-
-app.get("/api/betting/bets", (req, res) => res.json({ bets: coordinator.history }));
 
 // Only boot the HTTP server + scrapers when run directly (`node server.js`),
 // not when imported by tests.

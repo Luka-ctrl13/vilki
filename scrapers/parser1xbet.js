@@ -2,7 +2,7 @@
 // LiveFeed API from inside the authenticated page (page.evaluate(fetch)) instead
 // of scraping rendered DOM text. This is far more reliable (exact odds & lines)
 // and reuses the real browser session, so it passes anti-bot the same way a user
-// would. The SAME browser is later reused to place bets (see betting/placer.js).
+// would.
 //
 // NOTE: 1xBet geo-blocks data-center IPs (redirect to /block). Run from an
 // allowed region. Endpoints/codes below are the widely-used LiveFeed values;
@@ -153,9 +153,4 @@ async function getLiveEvents() {
   }
 }
 
-// Expose the browser/page so the bet placer can reuse the authenticated session.
-function getSession() {
-  return { browser, page };
-}
-
-module.exports = { getLiveEvents, parseGame, collectEvents, getSession };
+module.exports = { getLiveEvents, parseGame, collectEvents };

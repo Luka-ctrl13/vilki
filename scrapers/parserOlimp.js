@@ -18,14 +18,15 @@
 
 const BASE = process.env.OLIMP_BASE_URL || "https://olimpbet.kz";
 
-// Olimp sportId -> our sport label.
+// Olimp sportId -> [label, url slug]. The slug builds the deep link to the exact
+// live event: /live/{slug}-{sportId}/{eventId} (verified against the live site).
 const SPORTS = {
-  100: "Футбол",
-  101: "Теннис",
-  102: "Баскетбол",
-  103: "Хоккей",
-  104: "Волейбол",
-  110: "Наст. теннис",
+  100: ["Футбол", "football"],
+  101: ["Теннис", "tennis"],
+  102: ["Баскетбол", "basketball"],
+  103: ["Хоккей", "hockey"],
+  104: ["Волейбол", "volleyball"],
+  110: ["Наст. теннис", "table_tennis"],
 };
 
 const TOTAL_MARKET = 1003;
@@ -60,10 +61,11 @@ async function fetchSport(sportId) {
   const res = await fetch(`${BASE}/api/v2/events?${qs}`, { headers: HEADERS });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const json = await res.json();
-  return parseEvents(json, SPORTS[sportId] || String(sportId));
+  const [name, slug] = SPORTS[sportId] || [String(sportId), "all"];
+  return parseEvents(json, name, `${slug}-${sportId}`);
 }
 
-function parseEvents(payload, sportName) {
+function parseEvents(payload, sportName, sportPath) {
   const out = [];
   for (const ev of payload.items || []) {
     const comps = ev.competitors || [];
@@ -80,7 +82,7 @@ function parseEvents(payload, sportName) {
       team2: away,
       sport: sportName,
       live: !!ev.live,
-      link: `${BASE}/live/event/${ev.id}`,
+      link: `${BASE}/live/${sportPath}/${ev.id}`,
       totals: extractTotals(markets[TOTAL_MARKET]),
       handicaps: extractHandicaps(markets[HANDICAP_MARKET]),
     });

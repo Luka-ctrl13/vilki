@@ -10,9 +10,6 @@ npm-debug.log*
 # Runtime data
 data/*.json
 
-# Calibration is specific to your machine/accounts
-betting/calibration.json
-
 # OS / editor
 .DS_Store
 .idea/
