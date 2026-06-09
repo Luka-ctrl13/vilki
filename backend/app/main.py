@@ -8,9 +8,11 @@ from __future__ import annotations
 import asyncio
 import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.aggregator import Aggregator
 from app.arbitrage import BestPrice, evaluate_market
@@ -137,3 +139,11 @@ async def calc(payload: dict):
         "total_stake": result.total_stake,
         "legs": [leg.__dict__ for leg in result.legs],
     }
+
+
+# Serve the built React app (frontend/dist) from the same origin, so the whole
+# site is reachable on one port. Mounted last so /api/* routes win. The mount
+# is optional: if the bundle isn't built yet, the API still runs on its own.
+_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if _DIST.is_dir():
+    app.mount("/", StaticFiles(directory=str(_DIST), html=True), name="static")
