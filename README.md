@@ -32,6 +32,7 @@ scrapers/parserOlimp.js  — Olimp через JSON-API (быстро, надёж
 scrapers/parser1xbet.js  — 1xBet через LiveFeed JSON в stealth-браузере
 betting/coordinator.js   — риск-контроли, paper/real, история, partial-fill
 betting/placer.js        — проставление кликами в залогиненном браузере
+betting/calibrate.js     — интерактивная калибровка селекторов (npm run calibrate)
 public/index.html        — дашборд: сырые данные, вилки, ставки, кнопка
 test/                    — тесты (node --test)
 ```
@@ -59,8 +60,43 @@ Olimp, чтобы посмотреть весь пайплайн (только �
 - **Paper (по умолчанию):** симуляция, без денег. Безопасно.
 - **Real (`BETTING_MODE=real`):** клики в твоём залогиненном браузере. Профиль
   сессии хранится в `.profile-1xbet` / `.profile-olimp` (логинишься один раз).
-  Селекторы кликов калибруются один раз под реальные страницы в
-  `betting/placer.js` (пока `calibrated:false` — реальная ставка не отправится).
+  Клик-флоу работает по эвристикам (видимый текст/линии) из коробки; точные
+  селекторы калибруются командой `npm run calibrate` (см. ниже).
+- **Две защиты реального режима:**
+  - без `BETTING_CONFIRM=1` ставка только **АРМИТСЯ** (выбирает исход + вводит
+    сумму) и останавливается — посмотри, что выбрано верно, прежде чем доверять;
+  - перед подтверждением кэф перечитывается, и при падении больше
+    `BETTING_MAX_SLIPPAGE` (3%) ставка отменяется.
+
+### Калибровка реальных ставок
+
+```bash
+npm run calibrate 1xBet      # затем то же для Olimp
+```
+
+Скрипт откроет БК в том же профиле, что и проставление. Дальше:
+1. залогинься;
+2. открой любое live-событие и **кликни кэф**, чтобы появился купон;
+3. вернись в терминал, нажми Enter — он покажет найденные поля/кнопки, ты
+   выберешь поле суммы и кнопку «Поставить», и он запишет
+   `betting/calibration.json`.
+
+Затем проверь по нарастающей:
+```bash
+BETTING_MODE=real npm start                 # ARMED: только выбирает + вводит сумму
+BETTING_MODE=real BETTING_CONFIRM=1 npm start  # реально подтверждает ставку
+```
+
+Если эвристика не нашла поле/кнопку — пришли вывод этого DevTools-сниппета,
+запущенного на странице с открытым купоном:
+```js
+copy(JSON.stringify({
+  inputs:[...document.querySelectorAll('input')].filter(i=>i.offsetParent)
+    .map(i=>({type:i.type,ph:i.placeholder,name:i.name,cls:i.className})),
+  buttons:[...new Set([...document.querySelectorAll('button,[role=button]')]
+    .filter(b=>b.offsetParent).map(b=>b.innerText.trim()).filter(Boolean))]
+},null,2))
+```
 - **Риск-контроли:** общий выключатель, мин. прибыль, макс. ставка, защита от
   повторной ставки на одну вилку.
 - **Partial-fill:** если одна нога прошла, а вторая нет — статус `PARTIAL` с
@@ -78,6 +114,8 @@ Olimp, чтобы посмотреть весь пайплайн (только �
 | `BETTING_MODE` | `paper` / `real` | paper |
 | `BETTING_MIN_PROFIT` | мин. прибыль для ставки, % | 0.5 |
 | `BETTING_MAX_STAKE` | лимит на ставку, ₽ | 5000 |
+| `BETTING_CONFIRM` | `1` — реально подтверждать ставку (иначе ARMED) | — |
+| `BETTING_MAX_SLIPPAGE` | отмена при падении кэфа больше X | 0.03 |
 | `HEADLESS` | `new` для headless-браузера | — |
 
 ## Дисклеймер

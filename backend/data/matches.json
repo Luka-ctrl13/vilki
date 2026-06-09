@@ -1,0 +1,5669 @@
+{
+  "generated_at": "2026-06-09T19:34:14.707951",
+  "offers": [
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.83,
+          "line": 1.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140730",
+      "updated_at": "2026-06-09T19:34:14.521748"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.19,
+          "line": 1.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.59,
+          "line": 1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140730",
+      "updated_at": "2026-06-09T19:34:14.521767"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.63,
+          "line": 5.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.17,
+          "line": 5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140315",
+      "updated_at": "2026-06-09T19:34:14.521809"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.74,
+          "line": -3.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.41,
+          "line": -3.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140315",
+      "updated_at": "2026-06-09T19:34:14.521819"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.91,
+          "line": 3.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.77,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8121958",
+      "updated_at": "2026-06-09T19:34:14.521881"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.48,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.42,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8121958",
+      "updated_at": "2026-06-09T19:34:14.521894"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.91,
+          "line": 3.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.81,
+          "line": 3.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8129248",
+      "updated_at": "2026-06-09T19:34:14.521924"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.64,
+          "line": -2.0
+        },
+        {
+          "name": "H1",
+          "odd": 2.15,
+          "line": -2.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8129248",
+      "updated_at": "2026-06-09T19:34:14.521934"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Альмерия",
+      "away": "Кастельон",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.09,
+          "line": 2.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.67,
+          "line": 2.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8104010",
+      "updated_at": "2026-06-09T19:34:14.521958"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Альмерия",
+      "away": "Кастельон",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.83,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": -0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8104010",
+      "updated_at": "2026-06-09T19:34:14.521969"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Депортиво Риестра (рез)",
+      "away": "Платенсе (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.69,
+          "line": 1.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.99,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141627",
+      "updated_at": "2026-06-09T19:34:14.521996"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Депортиво Риестра (рез)",
+      "away": "Платенсе (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.73,
+          "line": -1.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.95,
+          "line": -1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141627",
+      "updated_at": "2026-06-09T19:34:14.522004"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Ланус (рез)",
+      "away": "Индепендьенте (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.34,
+          "line": 4.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.5,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141626",
+      "updated_at": "2026-06-09T19:34:14.522028"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Ланус (рез)",
+      "away": "Индепендьенте (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.43,
+          "line": 4.0
+        },
+        {
+          "name": "H2",
+          "odd": 2.55,
+          "line": 4.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141626",
+      "updated_at": "2026-06-09T19:34:14.522037"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Альдосиви (рез)",
+      "away": "Химнасия и Эсгрима Мендоза (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.62,
+          "line": 1.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.08,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141625",
+      "updated_at": "2026-06-09T19:34:14.522071"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Альдосиви (рез)",
+      "away": "Химнасия и Эсгрима Мендоза (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.55,
+          "line": -1.0
+        },
+        {
+          "name": "H1",
+          "odd": 2.23,
+          "line": -1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141625",
+      "updated_at": "2026-06-09T19:34:14.522083"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Бельграно (рез)",
+      "away": "Рафаэла (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.63,
+          "line": 0.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.04,
+          "line": 0.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141488",
+      "updated_at": "2026-06-09T19:34:14.522106"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Бельграно (рез)",
+      "away": "Рафаэла (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.2,
+          "line": -0.0
+        },
+        {
+          "name": "H1",
+          "odd": 3.81,
+          "line": 0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141488",
+      "updated_at": "2026-06-09T19:34:14.522115"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::19::vs::19",
+      "home": "Гимлетролл (до 19)",
+      "away": "Имаас (до 19)",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.77,
+          "line": 2.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.94,
+          "line": 2.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146717",
+      "updated_at": "2026-06-09T19:34:14.522140"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::19::vs::19",
+      "home": "Гимлетролл (до 19)",
+      "away": "Имаас (до 19)",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.67,
+          "line": -1.0
+        },
+        {
+          "name": "H1",
+          "odd": 2.09,
+          "line": -1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146717",
+      "updated_at": "2026-06-09T19:34:14.522148"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "УС Бугуба",
+      "away": "Диарра",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.05,
+          "line": 5.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.69,
+          "line": 5.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142533",
+      "updated_at": "2026-06-09T19:34:14.522188"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "УС Бугуба",
+      "away": "Диарра",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.2,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.6,
+          "line": -0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142533",
+      "updated_at": "2026-06-09T19:34:14.522198"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::22::vs::22",
+      "home": "Выборжанин-Город (до 22)",
+      "away": "СШ Петроградского района - Динамо (до 22)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.15,
+          "line": 3.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.63,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146700",
+      "updated_at": "2026-06-09T19:34:14.522231"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::22::vs::22",
+      "home": "Выборжанин-Город (до 22)",
+      "away": "СШ Петроградского района - Динамо (до 22)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.68,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.06,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146700",
+      "updated_at": "2026-06-09T19:34:14.522240"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Серро-Ларго (рез)",
+      "away": "Монтевидео Сити Торке (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.2,
+          "line": 3.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.6,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141486",
+      "updated_at": "2026-06-09T19:34:14.522263"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Серро-Ларго (рез)",
+      "away": "Монтевидео Сити Торке (рез)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.11,
+          "line": 1.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.65,
+          "line": 1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141486",
+      "updated_at": "2026-06-09T19:34:14.522272"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::20::vs::20",
+      "home": "Фламенго (до 20)",
+      "away": "Атлетико Паранаэнсе (до 20)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 1.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.67,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138790",
+      "updated_at": "2026-06-09T19:34:14.522296"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::20::vs::20",
+      "home": "Фламенго (до 20)",
+      "away": "Атлетико Паранаэнсе (до 20)",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.38,
+          "line": -1.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.52,
+          "line": -1.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138790",
+      "updated_at": "2026-06-09T19:34:14.522305"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Рингмахон Рейнджерс",
+      "away": "Рокмаунт",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.2,
+          "line": 2.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.6,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147028",
+      "updated_at": "2026-06-09T19:34:14.522328"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Рингмахон Рейнджерс",
+      "away": "Рокмаунт",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.78,
+          "line": -0.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.92,
+          "line": 0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147028",
+      "updated_at": "2026-06-09T19:34:14.522336"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Англия (жен)",
+      "away": "Украина (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 4.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.99,
+          "line": 4.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140814",
+      "updated_at": "2026-06-09T19:34:14.522358"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Англия (жен)",
+      "away": "Украина (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.66,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.03,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8140814",
+      "updated_at": "2026-06-09T19:34:14.522367"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Франция (жен)",
+      "away": "Ирландия (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.79,
+          "line": 2.0
+        },
+        {
+          "name": "Under",
+          "odd": 1.87,
+          "line": 2.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136460",
+      "updated_at": "2026-06-09T19:34:14.522388"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Франция (жен)",
+      "away": "Ирландия (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.13,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.6,
+          "line": -1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136460",
+      "updated_at": "2026-06-09T19:34:14.522395"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Исландия (жен)",
+      "away": "Испания (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.83,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136459",
+      "updated_at": "2026-06-09T19:34:14.522416"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Исландия (жен)",
+      "away": "Испания (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.91,
+          "line": 3.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.76,
+          "line": 3.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136459",
+      "updated_at": "2026-06-09T19:34:14.522424"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.08,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.63,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136458",
+      "updated_at": "2026-06-09T19:34:14.522445"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.08,
+          "line": -2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.63,
+          "line": -2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8136458",
+      "updated_at": "2026-06-09T19:34:14.522453"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Аультанес",
+      "away": "Хафнир",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.91,
+          "line": 6.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.76,
+          "line": 6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141067",
+      "updated_at": "2026-06-09T19:34:14.522514"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Аультанес",
+      "away": "Хафнир",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.87,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141067",
+      "updated_at": "2026-06-09T19:34:14.522524"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::1860",
+      "home": "Нюрнберг (люб)",
+      "away": "Мюнхен 1860 (люб)",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 6.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139989",
+      "updated_at": "2026-06-09T19:34:14.522553"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::1860",
+      "home": "Нюрнберг (люб)",
+      "away": "Мюнхен 1860 (люб)",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.1,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.58,
+          "line": -1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139989",
+      "updated_at": "2026-06-09T19:34:14.522562"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Вольфсбург (люб)",
+      "away": "Герта (люб)",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.85,
+          "line": 6.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.77,
+          "line": 6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139986",
+      "updated_at": "2026-06-09T19:34:14.522586"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Вольфсбург (люб)",
+      "away": "Герта (люб)",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.56,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.1,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139986",
+      "updated_at": "2026-06-09T19:34:14.522594"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::20::vs::20",
+      "home": "Деспортиво Либраде (до 20)",
+      "away": "Манаус (до 20)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 5.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.67,
+          "line": 5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147096",
+      "updated_at": "2026-06-09T19:34:14.522620"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::20::vs::20",
+      "home": "Деспортиво Либраде (до 20)",
+      "away": "Манаус (до 20)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.6,
+          "line": 5.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.2,
+          "line": 5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147096",
+      "updated_at": "2026-06-09T19:34:14.522630"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::20::vs::20",
+      "home": "Сан-Раймундо (до 20)",
+      "away": "Фаст Клубе (до 20)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.9,
+          "line": 2.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.8,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146725",
+      "updated_at": "2026-06-09T19:34:14.522655"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::20::vs::20",
+      "home": "Сан-Раймундо (до 20)",
+      "away": "Фаст Клубе (до 20)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.76,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.93,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146725",
+      "updated_at": "2026-06-09T19:34:14.522663"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Кавкаб Марракеш",
+      "away": "Раджа Касабланка",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.77,
+          "line": 5.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.97,
+          "line": 5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148315",
+      "updated_at": "2026-06-09T19:34:14.522770"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.72,
+          "line": 3.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.04,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148311",
+      "updated_at": "2026-06-09T19:34:14.522796"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.61,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.22,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148311",
+      "updated_at": "2026-06-09T19:34:14.522805"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 10.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.95,
+          "line": 10.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148310",
+      "updated_at": "2026-06-09T19:34:14.522829"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Ренессанс Земамра",
+      "away": "Унион Туарга",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.93,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.36,
+          "line": -1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148310",
+      "updated_at": "2026-06-09T19:34:14.522871"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.83,
+          "line": 7.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.39,
+          "line": 7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148319",
+      "updated_at": "2026-06-09T19:34:14.522901"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.34,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 3.08,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148319",
+      "updated_at": "2026-06-09T19:34:14.522911"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.33,
+          "line": 9.5
+        },
+        {
+          "name": "Under",
+          "odd": 3.13,
+          "line": 9.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148309",
+      "updated_at": "2026-06-09T19:34:14.522936"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.28,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 3.43,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148309",
+      "updated_at": "2026-06-09T19:34:14.522943"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.82,
+          "line": 13.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.92,
+          "line": 13.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147174",
+      "updated_at": "2026-06-09T19:34:14.522963"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Того",
+      "away": "Бенин",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.22,
+          "line": -2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.61,
+          "line": -2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147174",
+      "updated_at": "2026-06-09T19:34:14.523015"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 9.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.1,
+          "line": 9.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8145641",
+      "updated_at": "2026-06-09T19:34:14.523038"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Сан-Марино",
+      "away": "Азербайджан",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.8,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.94,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8145641",
+      "updated_at": "2026-06-09T19:34:14.523046"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.2,
+          "line": 3.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.62,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148322",
+      "updated_at": "2026-06-09T19:34:14.523074"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.87,
+          "line": -0.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.87,
+          "line": 0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148322",
+      "updated_at": "2026-06-09T19:34:14.523082"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.23,
+          "line": 7.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.61,
+          "line": 7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148321",
+      "updated_at": "2026-06-09T19:34:14.523104"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Либерия",
+      "away": "Сьерра-Леоне",
+      "start_time": "2026-06-09T18:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.98,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.77,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148321",
+      "updated_at": "2026-06-09T19:34:14.523112"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Альмерия",
+      "away": "Кастельон",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.37,
+          "line": 4.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.54,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150454",
+      "updated_at": "2026-06-09T19:34:14.523132"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Альмерия",
+      "away": "Кастельон",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.88,
+          "line": -0.0
+        },
+        {
+          "name": "H1",
+          "odd": 1.85,
+          "line": 0.0
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150454",
+      "updated_at": "2026-06-09T19:34:14.523141"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.65,
+          "line": 8.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.15,
+          "line": 8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148345",
+      "updated_at": "2026-06-09T19:34:14.523162"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.78,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.97,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148345",
+      "updated_at": "2026-06-09T19:34:14.523169"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.59,
+          "line": 2.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.28,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148344",
+      "updated_at": "2026-06-09T19:34:14.523191"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Нидерланды (жен)",
+      "away": "Польша (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.3,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 3.3,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148344",
+      "updated_at": "2026-06-09T19:34:14.523198"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::::vs::",
+      "home": "Исландия (жен)",
+      "away": "Испания (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.62,
+          "line": 9.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.22,
+          "line": 9.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148342",
+      "updated_at": "2026-06-09T19:34:14.523217"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::::vs::",
+      "home": "Исландия (жен)",
+      "away": "Испания (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.62,
+          "line": 8.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.22,
+          "line": 8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148342",
+      "updated_at": "2026-06-09T19:34:14.523224"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Лопес Черубино Ноа",
+      "away": "Эрнандес Карлес",
+      "start_time": "2026-06-09T17:19:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.48,
+          "line": 27.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.51,
+          "line": 27.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142810",
+      "updated_at": "2026-06-09T19:34:14.492396"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Лопес Черубино Ноа",
+      "away": "Эрнандес Карлес",
+      "start_time": "2026-06-09T17:19:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.07,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.69,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142810",
+      "updated_at": "2026-06-09T19:34:14.492416"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Базилетти Ноэми",
+      "away": "Лепченко Варвара",
+      "start_time": "2026-06-09T18:41:05",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.79,
+          "line": 23.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.94,
+          "line": 23.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8137647",
+      "updated_at": "2026-06-09T19:34:14.492441"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Базилетти Ноэми",
+      "away": "Лепченко Варвара",
+      "start_time": "2026-06-09T18:41:05",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.66,
+          "line": 5.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.11,
+          "line": 5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8137647",
+      "updated_at": "2026-06-09T19:34:14.492449"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Гонзалес Даниэле Хустина Мария",
+      "away": "Кониши Камарго Силва Джулия",
+      "start_time": "2026-06-09T18:58:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.82,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.9,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147787",
+      "updated_at": "2026-06-09T19:34:14.492476"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Гонзалес Даниэле Хустина Мария",
+      "away": "Кониши Камарго Силва Джулия",
+      "start_time": "2026-06-09T18:58:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.72,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.02,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147787",
+      "updated_at": "2026-06-09T19:34:14.492484"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Оливейра Мария Луиза",
+      "away": "Торрес Мурсия Мария Камила",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 15.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 15.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147788",
+      "updated_at": "2026-06-09T19:34:14.492528"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Оливейра Мария Луиза",
+      "away": "Торрес Мурсия Мария Камила",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.69,
+          "line": 8.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.07,
+          "line": 8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147788",
+      "updated_at": "2026-06-09T19:34:14.492536"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Маринков Павле",
+      "away": "Колби Райан",
+      "start_time": "2026-06-09T19:06:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.79,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.94,
+          "line": 22.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146616",
+      "updated_at": "2026-06-09T19:34:14.492575"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Маринков Павле",
+      "away": "Колби Райан",
+      "start_time": "2026-06-09T19:06:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.72,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.02,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146616",
+      "updated_at": "2026-06-09T19:34:14.492584"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Те Ригеле",
+      "away": "Домингес Жоау",
+      "start_time": "2026-06-09T19:18:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142816",
+      "updated_at": "2026-06-09T19:34:14.492619"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Те Ригеле",
+      "away": "Домингес Жоау",
+      "start_time": "2026-06-09T19:18:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": 3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.94,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142816",
+      "updated_at": "2026-06-09T19:34:14.492628"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Крисостом Джакомо",
+      "away": "Дардери Вито Антонио",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.94,
+          "line": 17.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 17.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138293",
+      "updated_at": "2026-06-09T19:34:14.492652"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Крисостом Джакомо",
+      "away": "Дардери Вито Антонио",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.16,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.63,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138293",
+      "updated_at": "2026-06-09T19:34:14.492660"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Джилл Феликс",
+      "away": "Романо Филиппо",
+      "start_time": "2026-06-09T20:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.91,
+          "line": 22.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143832",
+      "updated_at": "2026-06-09T19:34:14.492682"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Джилл Феликс",
+      "away": "Романо Филиппо",
+      "start_time": "2026-06-09T20:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.9,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.84,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143832",
+      "updated_at": "2026-06-09T19:34:14.492690"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Дэй Джей Пи",
+      "away": "Снелл Холланд",
+      "start_time": "2026-06-09T17:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 3.43,
+          "line": 24.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.29,
+          "line": 24.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147545",
+      "updated_at": "2026-06-09T19:34:14.492711"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Дэй Джей Пи",
+      "away": "Снелл Холланд",
+      "start_time": "2026-06-09T17:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.22,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 4.1,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147545",
+      "updated_at": "2026-06-09T19:34:14.492719"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Шалми Корнелиус Александер",
+      "away": "Шарыгин Эван",
+      "start_time": "2026-06-09T17:45:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.04,
+          "line": 27.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.73,
+          "line": 27.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143276",
+      "updated_at": "2026-06-09T19:34:14.492741"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Шалми Корнелиус Александер",
+      "away": "Шарыгин Эван",
+      "start_time": "2026-06-09T17:45:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.73,
+          "line": -2.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.04,
+          "line": -2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143276",
+      "updated_at": "2026-06-09T19:34:14.492748"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Джонс Алекс",
+      "away": "Калина Вит",
+      "start_time": "2026-06-09T17:56:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.82,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.9,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147582",
+      "updated_at": "2026-06-09T19:34:14.492767"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Джонс Алекс",
+      "away": "Калина Вит",
+      "start_time": "2026-06-09T17:56:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.76,
+          "line": 4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.98,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147582",
+      "updated_at": "2026-06-09T19:34:14.492775"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Диянни Дженсен",
+      "away": "Уильямс Софи",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.44,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.5,
+          "line": 18.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149676",
+      "updated_at": "2026-06-09T19:34:14.492793"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Диянни Дженсен",
+      "away": "Уильямс Софи",
+      "start_time": "2026-06-09T18:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.28,
+          "line": -5.5
+        },
+        {
+          "name": "H2",
+          "odd": 3.45,
+          "line": -5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149676",
+      "updated_at": "2026-06-09T19:34:14.492800"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Ли Карл Казума",
+      "away": "Петров Александр",
+      "start_time": "2026-06-09T18:03:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147578",
+      "updated_at": "2026-06-09T19:34:14.492907"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Ли Карл Казума",
+      "away": "Петров Александр",
+      "start_time": "2026-06-09T18:03:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.69,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.07,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147578",
+      "updated_at": "2026-06-09T19:34:14.492917"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Таллаксон Эйвери",
+      "away": "Альварес Марко",
+      "start_time": "2026-06-09T18:04:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.31,
+          "line": 20.5
+        },
+        {
+          "name": "Over",
+          "odd": 3.2,
+          "line": 20.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147585",
+      "updated_at": "2026-06-09T19:34:14.492940"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Таллаксон Эйвери",
+      "away": "Альварес Марко",
+      "start_time": "2026-06-09T18:04:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 3.87,
+          "line": 3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.23,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147585",
+      "updated_at": "2026-06-09T19:34:14.492948"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Кокс Натан",
+      "away": "Бхандари Арнав",
+      "start_time": "2026-06-09T18:05:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.94,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 22.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147584",
+      "updated_at": "2026-06-09T19:34:14.492983"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Кокс Натан",
+      "away": "Бхандари Арнав",
+      "start_time": "2026-06-09T18:05:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.94,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147584",
+      "updated_at": "2026-06-09T19:34:14.492990"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Степанов Тимофей",
+      "away": "Даял Нав",
+      "start_time": "2026-06-09T18:07:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.27,
+          "line": 19.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.58,
+          "line": 19.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147599",
+      "updated_at": "2026-06-09T19:34:14.493011"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Степанов Тимофей",
+      "away": "Даял Нав",
+      "start_time": "2026-06-09T18:07:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.66,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.11,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147599",
+      "updated_at": "2026-06-09T19:34:14.493019"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Лопес Паола",
+      "away": "Ллевелин Софи",
+      "start_time": "2026-06-09T18:17:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149194",
+      "updated_at": "2026-06-09T19:34:14.493041"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Лопес Паола",
+      "away": "Ллевелин Софи",
+      "start_time": "2026-06-09T18:17:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.21,
+          "line": 3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.6,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149194",
+      "updated_at": "2026-06-09T19:34:14.493049"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Кононова Мария",
+      "away": "Гомез Каролина",
+      "start_time": "2026-06-09T18:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.58,
+          "line": 20.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.27,
+          "line": 20.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146471",
+      "updated_at": "2026-06-09T19:34:14.493075"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Кононова Мария",
+      "away": "Гомез Каролина",
+      "start_time": "2026-06-09T18:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.16,
+          "line": 4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.63,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146471",
+      "updated_at": "2026-06-09T19:34:14.493084"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Маниома Веласкес Мариана",
+      "away": "Гуллаксен Николин",
+      "start_time": "2026-06-09T18:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.67,
+          "line": 21.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.13,
+          "line": 21.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138624",
+      "updated_at": "2026-06-09T19:34:14.493106"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Маниома Веласкес Мариана",
+      "away": "Гуллаксен Николин",
+      "start_time": "2026-06-09T18:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.05,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.71,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138624",
+      "updated_at": "2026-06-09T19:34:14.493113"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Сабаляускас Айнюс",
+      "away": "Котцен Эндрю",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.75,
+          "line": 17.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.02,
+          "line": 17.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138621",
+      "updated_at": "2026-06-09T19:34:14.493146"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Сабаляускас Айнюс",
+      "away": "Котцен Эндрю",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.84,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.91,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8138621",
+      "updated_at": "2026-06-09T19:34:14.493153"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Сантос Лилиан",
+      "away": "Сухрада Сусана",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.13,
+          "line": 20.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.67,
+          "line": 20.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146541",
+      "updated_at": "2026-06-09T19:34:14.493172"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Сантос Лилиан",
+      "away": "Сухрада Сусана",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.16,
+          "line": -5.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.64,
+          "line": -5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8146541",
+      "updated_at": "2026-06-09T19:34:14.493180"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::::vs::",
+      "home": "Фуэнтес Васкез Хуан Карлос",
+      "away": "Клайн Илан́",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.8,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.93,
+          "line": 18.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147546",
+      "updated_at": "2026-06-09T19:34:14.493201"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::::vs::",
+      "home": "Фуэнтес Васкез Хуан Карлос",
+      "away": "Клайн Илан́",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.8,
+          "line": -5.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.94,
+          "line": -5.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147546",
+      "updated_at": "2026-06-09T19:34:14.493209"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "totals",
+      "event_key": "hockey::::vs::",
+      "home": "Блад Джокерс",
+      "away": "Галакси Уорриорс",
+      "start_time": "2026-06-09T19:10:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.1,
+          "line": 10.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.64,
+          "line": 10.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139982",
+      "updated_at": "2026-06-09T19:34:14.652771"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "handicap",
+      "event_key": "hockey::::vs::",
+      "home": "Блад Джокерс",
+      "away": "Галакси Уорриорс",
+      "start_time": "2026-06-09T19:10:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.2,
+          "line": -2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.58,
+          "line": -2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139982",
+      "updated_at": "2026-06-09T19:34:14.652785"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "totals",
+      "event_key": "hockey::::vs::",
+      "home": "Нефтяник (люб)",
+      "away": "Звезда (люб)",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.9,
+          "line": 8.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.81,
+          "line": 8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8145060",
+      "updated_at": "2026-06-09T19:34:14.652810"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "handicap",
+      "event_key": "hockey::::vs::",
+      "home": "Нефтяник (люб)",
+      "away": "Звезда (люб)",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.61,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.15,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8145060",
+      "updated_at": "2026-06-09T19:34:14.652819"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "totals",
+      "event_key": "hockey::::vs::",
+      "home": "Хэви Хаммерс",
+      "away": "Скайхокс",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.69,
+          "line": 12.5
+        },
+        {
+          "name": "Over",
+          "odd": 2.05,
+          "line": 12.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139988",
+      "updated_at": "2026-06-09T19:34:14.652887"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "hockey",
+      "market": "handicap",
+      "event_key": "hockey::::vs::",
+      "home": "Хэви Хаммерс",
+      "away": "Скайхокс",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.05,
+          "line": -2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.67,
+          "line": -2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8139988",
+      "updated_at": "2026-06-09T19:34:14.652898"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "volleyball",
+      "market": "totals",
+      "event_key": "volleyball::::vs::",
+      "home": "Фокси-про (жен)",
+      "away": "Совы-про (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 183.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.85,
+          "line": 183.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150440",
+      "updated_at": "2026-06-09T19:34:14.651768"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "volleyball",
+      "market": "handicap",
+      "event_key": "volleyball::::vs::",
+      "home": "Фокси-про (жен)",
+      "away": "Совы-про (жен)",
+      "start_time": "2026-06-09T19:00:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.88,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.81,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150440",
+      "updated_at": "2026-06-09T19:34:14.651791"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Мартюхин Сергей",
+      "away": "Черноскулов Федор",
+      "start_time": "2026-06-09T19:05:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.74,
+          "line": 59.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.94,
+          "line": 59.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143262",
+      "updated_at": "2026-06-09T19:34:14.703026"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Мартюхин Сергей",
+      "away": "Черноскулов Федор",
+      "start_time": "2026-06-09T19:05:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.64,
+          "line": -11.5
+        },
+        {
+          "name": "H1",
+          "odd": 2.09,
+          "line": -11.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143262",
+      "updated_at": "2026-06-09T19:34:14.703057"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Сулима Илие",
+      "away": "Туркан Виктор",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.82,
+          "line": 77.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 77.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143530",
+      "updated_at": "2026-06-09T19:34:14.703094"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Сулима Илие",
+      "away": "Туркан Виктор",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.86,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.83,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143530",
+      "updated_at": "2026-06-09T19:34:14.703106"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Грубр Войтех",
+      "away": "Брандтл Алес",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.82,
+          "line": 81.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 81.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143529",
+      "updated_at": "2026-06-09T19:34:14.703134"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Грубр Войтех",
+      "away": "Брандтл Алес",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.91,
+          "line": 4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.78,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143529",
+      "updated_at": "2026-06-09T19:34:14.703145"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Баталов Анатолий",
+      "away": "Цветков Вячеслав",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.87,
+          "line": 75.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.81,
+          "line": 75.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143267",
+      "updated_at": "2026-06-09T19:34:14.703172"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Баталов Анатолий",
+      "away": "Цветков Вячеслав",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143267",
+      "updated_at": "2026-06-09T19:34:14.703182"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Алов Роман",
+      "away": "Пучинин Андрей",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.91,
+          "line": 65.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.77,
+          "line": 65.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142501",
+      "updated_at": "2026-06-09T19:34:14.703207"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Алов Роман",
+      "away": "Пучинин Андрей",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.07,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.66,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142501",
+      "updated_at": "2026-06-09T19:34:14.703216"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Ивчук Александр",
+      "away": "Чёрнобаб Владимир",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 83.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 83.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143366",
+      "updated_at": "2026-06-09T19:34:14.703242"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Ивчук Александр",
+      "away": "Чёрнобаб Владимир",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.88,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143366",
+      "updated_at": "2026-06-09T19:34:14.703251"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Ковальчук Александр",
+      "away": "Челпанов Сергей",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.89,
+          "line": 81.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.8,
+          "line": 81.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143339",
+      "updated_at": "2026-06-09T19:34:14.703285"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Ковальчук Александр",
+      "away": "Челпанов Сергей",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.92,
+          "line": 4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.77,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143339",
+      "updated_at": "2026-06-09T19:34:14.703298"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Селезнев Вячеслав",
+      "away": "Разинков Тимофей",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 75.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 75.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150516",
+      "updated_at": "2026-06-09T19:34:14.703326"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Селезнев Вячеслав",
+      "away": "Разинков Тимофей",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.89,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150516",
+      "updated_at": "2026-06-09T19:34:14.703334"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Лоуда Иржи",
+      "away": "Себера Петр",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 78.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.82,
+          "line": 78.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147365",
+      "updated_at": "2026-06-09T19:34:14.703371"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Лоуда Иржи",
+      "away": "Себера Петр",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.87,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147365",
+      "updated_at": "2026-06-09T19:34:14.703380"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Дурович Роман",
+      "away": "Коцвара Мартин",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.87,
+          "line": 72.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.82,
+          "line": 72.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143377",
+      "updated_at": "2026-06-09T19:34:14.703407"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Дурович Роман",
+      "away": "Коцвара Мартин",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.87,
+          "line": 9.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.82,
+          "line": 9.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8143377",
+      "updated_at": "2026-06-09T19:34:14.703416"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Зубов Алексей",
+      "away": "Харламов Дмитрий",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 73.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 73.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142094",
+      "updated_at": "2026-06-09T19:34:14.703441"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Зубов Алексей",
+      "away": "Харламов Дмитрий",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.89,
+          "line": 7.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": 7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142094",
+      "updated_at": "2026-06-09T19:34:14.703448"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Пряхин Вадим",
+      "away": "Ворожейкин Александр",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 75.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 75.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141572",
+      "updated_at": "2026-06-09T19:34:14.703473"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Пряхин Вадим",
+      "away": "Ворожейкин Александр",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.84,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.84,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141572",
+      "updated_at": "2026-06-09T19:34:14.703482"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Блейхарж Марек",
+      "away": "Адамчик Владимир",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 73.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 73.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141439",
+      "updated_at": "2026-06-09T19:34:14.703505"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Блейхарж Марек",
+      "away": "Адамчик Владимир",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": 7.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": 7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141439",
+      "updated_at": "2026-06-09T19:34:14.703514"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Волны Марек",
+      "away": "Гечко Давид",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.82,
+          "line": 74.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 74.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141406",
+      "updated_at": "2026-06-09T19:34:14.703536"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Волны Марек",
+      "away": "Гечко Давид",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.84,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.84,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141406",
+      "updated_at": "2026-06-09T19:34:14.703544"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Стеффан Ян",
+      "away": "Головатюк Юрий",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.79,
+          "line": 73.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.89,
+          "line": 73.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141390",
+      "updated_at": "2026-06-09T19:34:14.703573"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Стеффан Ян",
+      "away": "Головатюк Юрий",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.89,
+          "line": -7.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": -7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141390",
+      "updated_at": "2026-06-09T19:34:14.703580"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Пархоменко Дмитрий",
+      "away": "Винтер Томас",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 76.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 76.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141351",
+      "updated_at": "2026-06-09T19:34:14.703615"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Пархоменко Дмитрий",
+      "away": "Винтер Томас",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": 6.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": 6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8141351",
+      "updated_at": "2026-06-09T19:34:14.703623"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Мейсснер Седрик",
+      "away": "Хамада Казуки",
+      "start_time": "2026-06-09T19:15:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 79.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 79.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8148709",
+      "updated_at": "2026-06-09T19:34:14.703664"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Немец Михал",
+      "away": "Праченский Доминик",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 89.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.89,
+          "line": 89.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149081",
+      "updated_at": "2026-06-09T19:34:14.703688"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Немец Михал",
+      "away": "Праченский Доминик",
+      "start_time": "2026-06-09T19:20:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.83,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149081",
+      "updated_at": "2026-06-09T19:34:14.703696"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Силхан Петр",
+      "away": "Зламал Яромир",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 75.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.86,
+          "line": 75.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149088",
+      "updated_at": "2026-06-09T19:34:14.703719"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Силхан Петр",
+      "away": "Зламал Яромир",
+      "start_time": "2026-06-09T19:25:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": -8.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.93,
+          "line": -8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8149088",
+      "updated_at": "2026-06-09T19:34:14.703727"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Ковальчик Марцин",
+      "away": "Глановски Якуб",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.72,
+          "line": 72.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.99,
+          "line": 72.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8147444",
+      "updated_at": "2026-06-09T19:34:14.703767"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Анищенко Виктор",
+      "away": "Шубин Алексей",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.84,
+          "line": 76.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 76.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142751",
+      "updated_at": "2026-06-09T19:34:14.703789"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Анищенко Виктор",
+      "away": "Шубин Алексей",
+      "start_time": "2026-06-09T19:30:00",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.82,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.86,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8142751",
+      "updated_at": "2026-06-09T19:34:14.703798"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Бенеш Михаль",
+      "away": "Кульчицкий Алан",
+      "start_time": "2026-06-09T18:56:00.680000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.88,
+          "line": 109.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.81,
+          "line": 109.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150413",
+      "updated_at": "2026-06-09T19:34:14.703829"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Бенеш Михаль",
+      "away": "Кульчицкий Алан",
+      "start_time": "2026-06-09T18:56:00.680000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.87,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150413",
+      "updated_at": "2026-06-09T19:34:14.703895"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Кульнис Маргарита",
+      "away": "Залевска Катаржина",
+      "start_time": "2026-06-09T18:59:00.400000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 2.02,
+          "line": 128.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 128.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150439",
+      "updated_at": "2026-06-09T19:34:14.704013"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Кульнис Маргарита",
+      "away": "Залевска Катаржина",
+      "start_time": "2026-06-09T18:59:00.400000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.97,
+          "line": -6.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.73,
+          "line": -6.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150439",
+      "updated_at": "2026-06-09T19:34:14.704031"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Макаров Дмитрий",
+      "away": "Валов Станислав",
+      "start_time": "2026-06-09T19:02:00.963000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.69,
+          "line": 136.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.03,
+          "line": 136.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150421",
+      "updated_at": "2026-06-09T19:34:14.704073"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Макаров Дмитрий",
+      "away": "Валов Станислав",
+      "start_time": "2026-06-09T19:02:00.963000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.68,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.05,
+          "line": -4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150421",
+      "updated_at": "2026-06-09T19:34:14.704160"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Амендола Хулио",
+      "away": "Данте Ферейра",
+      "start_time": "2026-06-09T19:05:00.497000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.87,
+          "line": 117.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.81,
+          "line": 117.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150442",
+      "updated_at": "2026-06-09T19:34:14.704241"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Амендола Хулио",
+      "away": "Данте Ферейра",
+      "start_time": "2026-06-09T19:05:00.497000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 2.7,
+          "line": -8.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.4,
+          "line": -8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150442",
+      "updated_at": "2026-06-09T19:34:14.704262"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Соловов Григорий",
+      "away": "Панафутин Матвей",
+      "start_time": "2026-06-09T19:06:00.111000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 127.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.83,
+          "line": 127.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150475",
+      "updated_at": "2026-06-09T19:34:14.704300"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Соловов Григорий",
+      "away": "Панафутин Матвей",
+      "start_time": "2026-06-09T19:06:00.111000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.91,
+          "line": 4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.78,
+          "line": 4.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150475",
+      "updated_at": "2026-06-09T19:34:14.704313"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Добровольский Олег",
+      "away": "Карасев Ярослав",
+      "start_time": "2026-06-09T19:07:21.274000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.77,
+          "line": 117.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.92,
+          "line": 117.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150483",
+      "updated_at": "2026-06-09T19:34:14.704340"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Добровольский Олег",
+      "away": "Карасев Ярослав",
+      "start_time": "2026-06-09T19:07:21.274000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.91,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.78,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150483",
+      "updated_at": "2026-06-09T19:34:14.704350"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Ван Фу Чан",
+      "away": "Ван Син Лян",
+      "start_time": "2026-06-09T19:15:00.202000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 113.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.85,
+          "line": 113.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150490",
+      "updated_at": "2026-06-09T19:34:14.704376"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Динмухаметов Ильнур",
+      "away": "Рожков Даниил",
+      "start_time": "2026-06-09T19:18:00.303000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.85,
+          "line": 107.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.84,
+          "line": 107.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150508",
+      "updated_at": "2026-06-09T19:34:14.704413"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Динмухаметов Ильнур",
+      "away": "Рожков Даниил",
+      "start_time": "2026-06-09T19:18:00.303000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.84,
+          "line": 8.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.85,
+          "line": 8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150508",
+      "updated_at": "2026-06-09T19:34:14.704483"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Гришин Константин",
+      "away": "Памшев Дмитрий",
+      "start_time": "2026-06-09T19:18:45.994000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.9,
+          "line": 110.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.79,
+          "line": 110.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150506",
+      "updated_at": "2026-06-09T19:34:14.704541"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Гришин Константин",
+      "away": "Памшев Дмитрий",
+      "start_time": "2026-06-09T19:18:45.994000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.8,
+          "line": 3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": 3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150506",
+      "updated_at": "2026-06-09T19:34:14.704553"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Волин Дмитрий",
+      "away": "Батандаев Тагир",
+      "start_time": "2026-06-09T19:20:00.398000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.91,
+          "line": 113.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.78,
+          "line": 113.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150495",
+      "updated_at": "2026-06-09T19:34:14.704591"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Волин Дмитрий",
+      "away": "Батандаев Тагир",
+      "start_time": "2026-06-09T19:20:00.398000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.88,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150495",
+      "updated_at": "2026-06-09T19:34:14.704604"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Сидорков Александр",
+      "away": "Бородич Андрей",
+      "start_time": "2026-06-09T19:22:00.820000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.9,
+          "line": 102.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 102.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150496",
+      "updated_at": "2026-06-09T19:34:14.704638"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Сидорков Александр",
+      "away": "Бородич Андрей",
+      "start_time": "2026-06-09T19:22:00.820000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": -12.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.8,
+          "line": -12.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150496",
+      "updated_at": "2026-06-09T19:34:14.704649"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Рудов Дмитрий",
+      "away": "Стариченок Ярослав",
+      "start_time": "2026-06-09T19:24:00.321000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.85,
+          "line": 104.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 104.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150510",
+      "updated_at": "2026-06-09T19:34:14.704676"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Рудов Дмитрий",
+      "away": "Стариченок Ярослав",
+      "start_time": "2026-06-09T19:24:00.321000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H2",
+          "odd": 1.86,
+          "line": -8.5
+        },
+        {
+          "name": "H1",
+          "odd": 1.83,
+          "line": -8.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150510",
+      "updated_at": "2026-06-09T19:34:14.704685"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Лесевич Кшиштоф",
+      "away": "Пониковски Матеуш",
+      "start_time": "2026-06-09T19:24:00.663000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.78,
+          "line": 111.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.91,
+          "line": 111.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150512",
+      "updated_at": "2026-06-09T19:34:14.704711"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Лесевич Кшиштоф",
+      "away": "Пониковски Матеуш",
+      "start_time": "2026-06-09T19:24:00.663000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.88,
+          "line": -3.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150512",
+      "updated_at": "2026-06-09T19:34:14.704721"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Заболоцкий Владислав",
+      "away": "Жишкевич Виталий",
+      "start_time": "2026-06-09T19:25:00.671000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 118.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.83,
+          "line": 118.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150505",
+      "updated_at": "2026-06-09T19:34:14.704749"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Заболоцкий Владислав",
+      "away": "Жишкевич Виталий",
+      "start_time": "2026-06-09T19:25:00.671000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": 1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.88,
+          "line": 1.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150505",
+      "updated_at": "2026-06-09T19:34:14.704759"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Орёл Дмитрий",
+      "away": "Шветцов Никита",
+      "start_time": "2026-06-09T19:25:00.817000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.81,
+          "line": 107.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.88,
+          "line": 107.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150519",
+      "updated_at": "2026-06-09T19:34:14.704785"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Орёл Дмитрий",
+      "away": "Шветцов Никита",
+      "start_time": "2026-06-09T19:25:00.817000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.84,
+          "line": -7.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.85,
+          "line": -7.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150519",
+      "updated_at": "2026-06-09T19:34:14.704793"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::::vs::",
+      "home": "Тимейчик Богуслав",
+      "away": "Збигнев Кисала",
+      "start_time": "2026-06-09T19:30:00.420000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Under",
+          "odd": 1.85,
+          "line": 110.5
+        },
+        {
+          "name": "Over",
+          "odd": 1.83,
+          "line": 110.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150518",
+      "updated_at": "2026-06-09T19:34:14.704819"
+    },
+    {
+      "bookmaker": "Olimp",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::::vs::",
+      "home": "Тимейчик Богуслав",
+      "away": "Збигнев Кисала",
+      "start_time": "2026-06-09T19:30:00.420000",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.86,
+          "line": 2.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.82,
+          "line": 2.5
+        }
+      ],
+      "link": "https://olimpbet.kz/live/event/8150518",
+      "updated_at": "2026-06-09T19:34:14.704827"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.01,
+          "line": 2.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.77,
+          "line": 2.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001733"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.05,
+          "line": 2.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.76,
+          "line": 2.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001748"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.01,
+          "line": 2.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.8,
+          "line": 2.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001757"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.99,
+          "line": 2.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.81,
+          "line": 2.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001766"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.82,
+          "line": -1.0
+        },
+        {
+          "name": "H2",
+          "odd": 2.13,
+          "line": -1.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001789"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.84,
+          "line": -1.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.98,
+          "line": -1.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001799"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.0,
+          "line": -1.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.92,
+          "line": -1.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001806"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::liverpool::vs::manchester city",
+      "home": "Manchester City",
+      "away": "Liverpool",
+      "start_time": "2026-06-09T19:30:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.81,
+          "line": -1.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.95,
+          "line": -1.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/soccer::liverpool::vs::manchester city",
+      "updated_at": "2026-06-09T19:34:14.001814"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.88,
+          "line": 3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001869"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.07,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.9,
+          "line": 3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001882"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.86,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.88,
+          "line": 3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001891"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "soccer",
+      "market": "totals",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.93,
+          "line": 3.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.06,
+          "line": 3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001899"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.08,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.73,
+          "line": 0.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001911"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.27,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.71,
+          "line": 0.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001918"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.1,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.89,
+          "line": 0.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001927"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "soccer",
+      "market": "handicap",
+      "event_key": "soccer::barcelona::vs::real madrid",
+      "home": "Real Madrid",
+      "away": "Barcelona",
+      "start_time": "2026-06-09T19:31:14.001588",
+      "is_live": true,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.05,
+          "line": 0.0
+        },
+        {
+          "name": "H2",
+          "odd": 1.7,
+          "line": 0.0
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/soccer::barcelona::vs::real madrid",
+      "updated_at": "2026-06-09T19:34:14.001934"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.74,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.11,
+          "line": 22.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001959"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.7,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.05,
+          "line": 22.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001966"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.72,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.08,
+          "line": 22.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001974"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "tennis",
+      "market": "totals",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.72,
+          "line": 22.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.08,
+          "line": 22.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001982"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.79,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.01,
+          "line": -3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001992"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.97,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.0,
+          "line": -3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.001999"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.83,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.16,
+          "line": -3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.002007"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "tennis",
+      "market": "handicap",
+      "event_key": "tennis::alcaraz::vs::djokovic",
+      "home": "Djokovic",
+      "away": "Alcaraz",
+      "start_time": "2026-06-09T20:39:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.8,
+          "line": -3.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.99,
+          "line": -3.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/tennis::alcaraz::vs::djokovic",
+      "updated_at": "2026-06-09T19:34:14.002014"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "basketball",
+      "market": "totals",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.71,
+          "line": 210.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.09,
+          "line": 210.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002042"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "basketball",
+      "market": "totals",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.73,
+          "line": 210.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.08,
+          "line": 210.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002054"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "basketball",
+      "market": "totals",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.7,
+          "line": 210.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 210.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002065"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "basketball",
+      "market": "totals",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 1.75,
+          "line": 210.5
+        },
+        {
+          "name": "Under",
+          "odd": 2.07,
+          "line": 210.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002076"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "basketball",
+      "market": "handicap",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.77,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.04,
+          "line": -4.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002085"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "basketball",
+      "market": "handicap",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.77,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.0,
+          "line": -4.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002092"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "basketball",
+      "market": "handicap",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.77,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.99,
+          "line": -4.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002099"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "basketball",
+      "market": "handicap",
+      "event_key": "basketball::celtics::vs::lakers",
+      "home": "Lakers",
+      "away": "Celtics",
+      "start_time": "2026-06-09T19:56:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.78,
+          "line": -4.5
+        },
+        {
+          "name": "H2",
+          "odd": 2.0,
+          "line": -4.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/basketball::celtics::vs::lakers",
+      "updated_at": "2026-06-09T19:34:14.002106"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.08,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.73,
+          "line": 18.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002129"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.03,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.78,
+          "line": 18.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002138"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.04,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.79,
+          "line": 18.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002145"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "table_tennis",
+      "market": "totals",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "Over",
+          "odd": 2.08,
+          "line": 18.5
+        },
+        {
+          "name": "Under",
+          "odd": 1.72,
+          "line": 18.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002152"
+    },
+    {
+      "bookmaker": "BetAlpha",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.98,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.99,
+          "line": -1.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/betalpha/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002162"
+    },
+    {
+      "bookmaker": "OddsKing",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 2.14,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.79,
+          "line": -1.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/oddsking/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002169"
+    },
+    {
+      "bookmaker": "ProBet",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.94,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.82,
+          "line": -1.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/probet/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002175"
+    },
+    {
+      "bookmaker": "LiveLine",
+      "sport": "table_tennis",
+      "market": "handicap",
+      "event_key": "table tennis::ma long::vs::wang chuqin",
+      "home": "Wang Chuqin",
+      "away": "Ma Long",
+      "start_time": "2026-06-09T20:10:14.001588",
+      "is_live": false,
+      "selections": [
+        {
+          "name": "H1",
+          "odd": 1.97,
+          "line": -1.5
+        },
+        {
+          "name": "H2",
+          "odd": 1.82,
+          "line": -1.5
+        }
+      ],
+      "link": "https://example-bookmaker.test/liveline/table tennis::ma long::vs::wang chuqin",
+      "updated_at": "2026-06-09T19:34:14.002183"
+    }
+  ]
+}
