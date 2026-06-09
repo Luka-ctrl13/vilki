@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: vilki-scanner
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: SCAN_MS
+        value: "5000"
+      - key: DEFAULT_STAKE
+        value: "10000"
+      - key: MIN_DISPLAY_PROFIT
+        value: "0"
