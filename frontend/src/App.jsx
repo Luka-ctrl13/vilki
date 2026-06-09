@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { fetchHealth, fetchSurebets } from "./api.js";
+import {
+  fetchBets,
+  fetchBettingStatus,
+  fetchHealth,
+  fetchSurebets,
+  placeBet,
+  toggleBetting,
+} from "./api.js";
 import SurebetCard from "./SurebetCard.jsx";
+import BettingBar from "./BettingBar.jsx";
 
 const SPORTS = [
   { key: "", label: "Все виды спорта" },
@@ -24,6 +32,33 @@ export default function App() {
   const [stake, setStake] = useState(1000);
   const [autoRefresh, setAutoRefresh] = useState(true);
 
+  // Betting automation.
+  const [betting, setBetting] = useState(null);
+  const [bets, setBets] = useState([]);
+
+  const loadBetting = useCallback(async () => {
+    try {
+      const [st, b] = await Promise.all([fetchBettingStatus(), fetchBets()]);
+      setBetting(st);
+      setBets(b.bets || []);
+    } catch {
+      /* betting endpoints optional */
+    }
+  }, []);
+
+  const onToggleBetting = useCallback(async (enabled) => {
+    setBetting(await toggleBetting(enabled));
+  }, []);
+
+  const onPlace = useCallback(
+    async (id, amount) => {
+      const bet = await placeBet(id, amount);
+      loadBetting();
+      return bet;
+    },
+    [loadBetting]
+  );
+
   const load = useCallback(async () => {
     setLoading(true);
     try {
@@ -43,13 +78,17 @@ export default function App() {
 
   useEffect(() => {
     load();
-  }, [load]);
+    loadBetting();
+  }, [load, loadBetting]);
 
   useEffect(() => {
     if (!autoRefresh) return;
-    const id = setInterval(load, 10000);
+    const id = setInterval(() => {
+      load();
+      loadBetting();
+    }, 10000);
     return () => clearInterval(id);
-  }, [autoRefresh, load]);
+  }, [autoRefresh, load, loadBetting]);
 
   const bestProfit = useMemo(
     () => (surebets.length ? Math.max(...surebets.map((s) => s.profit_pct)) : 0),
@@ -140,12 +179,20 @@ export default function App() {
         </div>
       )}
 
+      <BettingBar status={betting} bets={bets} onToggle={onToggleBetting} />
+
       <main className="grid">
         {surebets.length === 0 && !loading && (
           <div className="empty">Вилок по текущим фильтрам нет. Попробуй снизить мин. прибыль.</div>
         )}
         {surebets.map((s) => (
-          <SurebetCard key={`${s.event_key}:${s.market}`} surebet={s} />
+          <SurebetCard
+            key={s.id}
+            surebet={s}
+            stake={stake}
+            canBet={!!betting?.enabled}
+            onPlaced={onPlace}
+          />
         ))}
       </main>
 

@@ -110,4 +110,58 @@ body {
   font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px;
 }
 
+/* market chip in card head */
+.market {
+  background: rgba(91,140,255,.14); color: var(--accent-2);
+  padding: 2px 8px; border-radius: 6px; font-weight: 700; font-size: 11px;
+}
+
+/* betting bar */
+.betbar {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 14px 18px; margin-bottom: 18px;
+}
+.betbar-main { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.mode { font-weight: 800; font-size: 12px; padding: 5px 12px; border-radius: 8px; letter-spacing: .5px; }
+.mode.paper { background: rgba(91,140,255,.15); color: var(--accent-2); }
+.mode.real { background: rgba(255,91,127,.18); color: var(--live); }
+.switch { display: flex; align-items: center; gap: 8px; font-weight: 600; cursor: pointer; }
+.switch input { width: 18px; height: 18px; accent-color: var(--accent); }
+.betbar-meta { color: var(--muted); font-size: 12px; }
+.executors { margin-left: auto; display: flex; gap: 8px; }
+.exec { font-size: 12px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); }
+.exec.ok { color: var(--accent); }
+.exec.no { color: var(--warn); }
+.betbar-warn {
+  margin-top: 12px; padding: 10px 12px; border-radius: 8px;
+  background: #3a1622; border: 1px solid #7a2440; color: #ffb3c4; font-size: 13px;
+}
+.bets-history { margin-top: 12px; }
+.bets-history summary { cursor: pointer; color: var(--muted); font-size: 13px; }
+.bets-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+.bet-row {
+  display: grid; grid-template-columns: 110px 1fr 110px 80px 70px; gap: 10px;
+  align-items: center; font-size: 13px; padding: 6px 10px;
+  background: var(--panel-2); border-radius: 8px;
+}
+.bet-status { font-weight: 700; font-size: 11px; }
+.bet-row.simulated .bet-status, .bet-row.placed .bet-status { color: var(--accent); }
+.bet-row.partial .bet-status { color: var(--warn); }
+.bet-row.rejected .bet-status, .bet-row.failed .bet-status { color: var(--live); }
+.bet-prof { color: var(--accent); text-align: right; }
+
+/* place button + result on card */
+.bet-btn {
+  margin-left: auto; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #04121d; border: 0; border-radius: 8px; padding: 7px 16px;
+  font-weight: 700; cursor: pointer; font-size: 13px;
+}
+.bet-btn:disabled { opacity: .45; cursor: not-allowed; }
+.bet-result { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 13px; }
+.bet-result.ok { background: rgba(54,211,153,.12); border: 1px solid #2c6; color: var(--accent); }
+.bet-result.warn { background: #3a2a16; border: 1px solid #7a5a24; color: var(--warn); }
+.bet-result.bad { background: #3a1622; border: 1px solid #7a2440; color: #ffb3c4; }
+.bet-note { margin-top: 4px; }
+.bet-leg { color: var(--muted); font-size: 12px; margin-top: 2px; }
+
 .foot { margin-top: 26px; text-align: center; color: var(--muted); font-size: 12px; }

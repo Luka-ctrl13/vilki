@@ -1,28 +1,17 @@
-"""1xbet live-odds parser via the public LiveFeed JSON API.
+"""1xbet live-odds parser — totals and handicaps via the LiveFeed JSON API.
 
-1xbet's front-end feeds the live page from:
+Two-step, like the site itself:
+  1. GET {BASE}/LiveFeed/Get1x2_VZip?sports=<id>&... -> live game list (ids/names)
+  2. GET {BASE}/LiveFeed/GetGameZip?id=<gameId>&... -> full market tree for a game
 
-    GET {BASE}/LiveFeed/Get1x2_VZip
-        ?sports=<sportId>&count=N&lng=ru&mode=4&country=1&partner=51
-        &top=false&virtualSports=true&noFilterBlockEvent=true
-
-Response shape (trimmed):
-    { "Success": true,
-      "Value": [
-        { "I": 123456789,            # game id
-          "O1": "Home Team", "O2": "Away Team",
-          "S": 1733770000,            # start unix ts
-          "E": [                      # main 1x2 market
-            {"T": 1, "C": 2.10},      # T=1 -> W1 (home)
-            {"T": 2, "C": 3.40},      # T=2 -> X  (draw)
-            {"T": 3, "C": 3.10}       # T=3 -> W2 (away)
-          ] }, ...
-      ] }
-
-Note on availability: 1xbet geo-blocks data-center IP ranges (requests get
-redirected to /en/block), so this parser will return nothing from a blocked
-host. Run it from an allowed region/residential IP, or point BASE at a working
-mirror via the ONEXBET_BASE_URL env var. The parser fails safe (returns []).
+Full-markets event codes (field `T`) in the GetGameZip tree, with the line in
+field `P`:
+    7  -> Handicap 1 (home),   8  -> Handicap 2 (away)
+    9  -> Total Over,          10 -> Total Under
+These codes are the widely-used 1xbet values; because 1xbet geo-blocks
+data-center IPs we cannot verify them from here, so they live in one dict
+(EVENT_CODES) that is trivial to correct against a live feed if a mirror shows
+different numbering. The parser fails safe (returns []) on block/parse errors.
 """
 from __future__ import annotations
 
@@ -37,25 +26,38 @@ from app.parsers.base import BaseParser, make_event_key
 
 BASE = os.getenv("ONEXBET_BASE_URL", "https://1xbet.com")
 
-# 1xbet sportId -> our coarse sport bucket.
 SPORT_BUCKETS = {
     1: "soccer",
     2: "hockey",
     3: "basketball",
     4: "tennis",
     10: "table_tennis",
-    3000: "volleyball",  # volleyball id varies by mirror; harmless if absent
 }
 
-# Main 1x2 market: event type T -> our label.
-OUTCOME_LABELS = {1: "1", 2: "X", 3: "2"}
+# event-type code -> (market, side). Line comes from the event's `P` field.
+EVENT_CODES = {
+    9: ("totals", "Over"),
+    10: ("totals", "Under"),
+    7: ("handicap", "H1"),
+    8: ("handicap", "H2"),
+}
+
+_PARTNER = os.getenv("ONEXBET_PARTNER", "51")
 
 
 class OneXBetParser(BaseParser):
     name = "onexbet"
 
-    def __init__(self, count: int = 40, timeout: float = 15.0, concurrency: int = 3, lng: str = "ru"):
+    def __init__(
+        self,
+        count: int = 20,
+        max_games_per_sport: int = 15,
+        timeout: float = 15.0,
+        concurrency: int = 4,
+        lng: str = "ru",
+    ):
         self.count = count
+        self.max_games = max_games_per_sport
         self.timeout = timeout
         self.lng = lng
         self._sem = asyncio.Semaphore(concurrency)
@@ -75,82 +77,105 @@ class OneXBetParser(BaseParser):
     async def fetch(self) -> list[BookmakerOffer]:
         if not self.enabled:
             return []
-        # follow_redirects=False so a geo-block 302 yields nothing instead of HTML.
         async with httpx.AsyncClient(
             timeout=self.timeout, headers=self._headers, follow_redirects=False
         ) as client:
-            tasks = [self._fetch_sport(client, sid, bucket) for sid, bucket in SPORT_BUCKETS.items()]
-            results = await asyncio.gather(*tasks, return_exceptions=True)
+            sport_tasks = [self._live_games(client, sid, b) for sid, b in SPORT_BUCKETS.items()]
+            game_lists = await asyncio.gather(*sport_tasks, return_exceptions=True)
+
+            game_tasks = []
+            for gl in game_lists:
+                if isinstance(gl, list):
+                    for (gid, home, away, bucket) in gl[: self.max_games]:
+                        game_tasks.append(self._game_markets(client, gid, home, away, bucket))
+            results = await asyncio.gather(*game_tasks, return_exceptions=True)
+
         offers: list[BookmakerOffer] = []
         for r in results:
             if isinstance(r, list):
                 offers.extend(r)
         return offers
 
-    async def _fetch_sport(
-        self, client: httpx.AsyncClient, sport_id: int, bucket: str
-    ) -> list[BookmakerOffer]:
+    async def _live_games(self, client, sport_id, bucket) -> list[tuple]:
         params = {
-            "sports": sport_id,
-            "count": self.count,
-            "lng": self.lng,
-            "mode": 4,
-            "country": 1,
-            "partner": 51,
-            "top": "false",
-            "virtualSports": "true",
-            "noFilterBlockEvent": "true",
+            "sports": sport_id, "count": self.count, "lng": self.lng, "mode": 4,
+            "country": 1, "partner": _PARTNER, "top": "false",
+            "virtualSports": "true", "noFilterBlockEvent": "true",
         }
         async with self._sem:
             resp = await client.get(f"{BASE}/LiveFeed/Get1x2_VZip", params=params)
         if resp.status_code != 200:
             import logging
-
             logging.getLogger("parsers").warning(
-                "onexbet sport %s -> HTTP %s (geo-block?)", sport_id, resp.status_code
+                "onexbet list sport %s -> HTTP %s (geo-block?)", sport_id, resp.status_code
             )
             return []
         try:
             data = resp.json()
         except ValueError:
             return []
-        return self._parse(data, bucket)
+        games = []
+        for g in data.get("Value", []) or []:
+            gid, home, away = g.get("I"), g.get("O1"), g.get("O2")
+            if gid and home and away:
+                games.append((gid, home, away, bucket))
+        return games
 
-    def _parse(self, data: dict, bucket: str) -> list[BookmakerOffer]:
+    async def _game_markets(self, client, gid, home, away, bucket) -> list[BookmakerOffer]:
+        params = {
+            "id": gid, "lng": self.lng, "country": 1, "partner": _PARTNER,
+            "grMode": 4, "isSubGames": "true", "GroupEvents": "true",
+            "countevents": 250, "marketType": 1,
+        }
+        async with self._sem:
+            resp = await client.get(f"{BASE}/LiveFeed/GetGameZip", params=params)
+        if resp.status_code != 200:
+            return []
+        try:
+            data = resp.json()
+        except ValueError:
+            return []
+        return self._parse_game(data.get("Value", {}), home, away, bucket)
+
+    def _parse_game(self, value: dict, home, away, bucket) -> list[BookmakerOffer]:
+        events = _collect_events(value)
+        start = self._parse_time(value.get("S"))
+        gid = value.get("I")
+        event_key = make_event_key(bucket, home, away)
+
+        per_market: dict[str, list[Selection]] = {"totals": [], "handicap": []}
+        for e in events:
+            mapping = EVENT_CODES.get(e.get("T"))
+            coef, param = e.get("C"), e.get("P")
+            if not mapping or not isinstance(coef, (int, float)) or coef <= 1.0 or param is None:
+                continue
+            market, side = mapping
+            try:
+                line = float(param)
+            except (TypeError, ValueError):
+                continue
+            if market == "handicap" and side == "H2":
+                line = -line  # normalize to home perspective
+            per_market[market].append(Selection(name=side, odd=float(coef), line=round(line, 2)))
+
         offers: list[BookmakerOffer] = []
-        for game in data.get("Value", []) or []:
-            home = game.get("O1") or ""
-            away = game.get("O2") or ""
-            if not home or not away:
-                continue
-            sels = self._extract_1x2(game.get("E", []))
-            if len(sels) < 2:
-                continue
-            offers.append(
-                BookmakerOffer(
-                    bookmaker="1xbet",
-                    sport=bucket,
-                    market="1x2",
-                    event_key=make_event_key(bucket, home, away),
-                    home=home,
-                    away=away,
-                    start_time=self._parse_time(game.get("S")),
-                    is_live=True,  # Get1x2_VZip is the live feed
-                    selections=sels,
-                    link=f"{BASE}/en/live/{game.get('I')}",
+        for market, sels in per_market.items():
+            if len(sels) >= 2:
+                offers.append(
+                    BookmakerOffer(
+                        bookmaker="1xbet",
+                        sport=bucket,
+                        market=market,
+                        event_key=event_key,
+                        home=home,
+                        away=away,
+                        start_time=start,
+                        is_live=True,
+                        selections=sels,
+                        link=f"{BASE}/en/live/{gid}",
+                    )
                 )
-            )
         return offers
-
-    @staticmethod
-    def _extract_1x2(events: list[dict]) -> list[Selection]:
-        sels: list[Selection] = []
-        for e in events or []:
-            label = OUTCOME_LABELS.get(e.get("T"))
-            coef = e.get("C")
-            if label and isinstance(coef, (int, float)) and coef > 1.0:
-                sels.append(Selection(name=label, odd=float(coef)))
-        return sels
 
     @staticmethod
     def _parse_time(ts) -> datetime | None:
@@ -160,3 +185,22 @@ class OneXBetParser(BaseParser):
             return datetime.utcfromtimestamp(int(ts))
         except (ValueError, TypeError, OSError):
             return None
+
+
+def _collect_events(node, out: list | None = None) -> list[dict]:
+    """Recursively gather all event dicts (carrying a `T` type) from the game tree.
+
+    GetGameZip nests events under GE -> E (lists of lists), so we walk the whole
+    structure and pick out any dict that looks like a betting event.
+    """
+    if out is None:
+        out = []
+    if isinstance(node, dict):
+        if "T" in node and ("C" in node or "P" in node):
+            out.append(node)
+        for v in node.values():
+            _collect_events(v, out)
+    elif isinstance(node, list):
+        for v in node:
+            _collect_events(v, out)
+    return out

@@ -54,63 +54,71 @@ class Aggregator:
         surebets: list[Surebet] = []
 
         for (sport, market, event_key), group in self.group(offers).items():
-            # Need at least two distinct bookmakers to have any chance of an arb.
-            if len({o.bookmaker for o in group}) < 2:
-                continue
-
-            # Build outcome -> [BestPrice across all bookmakers].
-            outcome_offers: dict[str, list[BestPrice]] = defaultdict(list)
-            all_outcomes: set[str] = set()
+            ref = group[0]
+            # Totals/handicaps arbitrage is only valid on a MATCHING line. So we
+            # sub-group every selection by its line and evaluate each line as its
+            # own 2-way market (Over/Under or H1/H2).
+            by_line: dict[float, dict[str, list[BestPrice]]] = defaultdict(lambda: defaultdict(list))
             for o in group:
                 for sel in o.selections:
-                    outcome_offers[sel.name].append(
-                        BestPrice(outcome=sel.name, bookmaker=o.bookmaker, odd=sel.odd, link=o.link)
+                    if sel.line is None:
+                        continue
+                    line = round(sel.line, 2)
+                    by_line[line][sel.name].append(
+                        BestPrice(
+                            outcome=sel.name,
+                            bookmaker=o.bookmaker,
+                            odd=sel.odd,
+                            line=line,
+                            link=o.link,
+                        )
                     )
-                all_outcomes.update(s.name for s in o.selections)
 
-            # Only evaluate markets where every outcome is priced by someone.
-            if any(not outcome_offers[oc] for oc in all_outcomes) or len(all_outcomes) < 2:
-                continue
+            for line, outcome_offers in by_line.items():
+                # A valid market at this line needs both sides priced.
+                if len(outcome_offers) < 2:
+                    continue
+                try:
+                    result = evaluate_market(dict(outcome_offers), total_stake=stake)
+                except ValueError:
+                    continue
+                if not result.is_surebet:
+                    continue
+                # A real cross-book arb involves at least two bookmakers.
+                if len({leg.bookmaker for leg in result.legs}) < 2:
+                    continue
 
-            try:
-                result = evaluate_market(
-                    {oc: outcome_offers[oc] for oc in all_outcomes}, total_stake=stake
+                legs = [
+                    SurebetLeg(
+                        outcome=leg.outcome,
+                        bookmaker=leg.bookmaker,
+                        odd=leg.odd,
+                        line=leg.line,
+                        implied_prob=round(leg.implied_prob, 4),
+                        stake=leg.stake,
+                        stake_pct=leg.stake_pct,
+                        link=leg.link,
+                    )
+                    for leg in result.legs
+                ]
+                surebets.append(
+                    Surebet(
+                        id=f"{event_key}|{market}|{line}",
+                        sport=sport,
+                        market=market,
+                        line=line,
+                        event_key=event_key,
+                        home=ref.home,
+                        away=ref.away,
+                        start_time=ref.start_time,
+                        is_live=any(o.is_live for o in group),
+                        legs=legs,
+                        arb_index=result.arb_index,
+                        profit_pct=result.profit_pct,
+                        total_stake=result.total_stake,
+                        bookmakers=sorted({leg.bookmaker for leg in legs}),
+                    )
                 )
-            except ValueError:
-                continue
-
-            if not result.is_surebet:
-                continue
-
-            ref = group[0]
-            legs = [
-                SurebetLeg(
-                    outcome=leg.outcome,
-                    bookmaker=leg.bookmaker,
-                    odd=leg.odd,
-                    implied_prob=round(leg.implied_prob, 4),
-                    stake=leg.stake,
-                    stake_pct=leg.stake_pct,
-                    link=leg.link,
-                )
-                for leg in result.legs
-            ]
-            surebets.append(
-                Surebet(
-                    sport=sport,
-                    market=market,
-                    event_key=event_key,
-                    home=ref.home,
-                    away=ref.away,
-                    start_time=ref.start_time,
-                    is_live=any(o.is_live for o in group),
-                    legs=legs,
-                    arb_index=result.arb_index,
-                    profit_pct=result.profit_pct,
-                    total_stake=result.total_stake,
-                    bookmakers=sorted({leg.bookmaker for leg in legs}),
-                )
-            )
 
         surebets.sort(key=lambda s: s.profit_pct, reverse=True)
         return surebets

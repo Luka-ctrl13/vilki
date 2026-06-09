@@ -34,6 +34,7 @@ class BestPrice:
     outcome: str
     bookmaker: str
     odd: float
+    line: float | None = None
     link: str | None = None
 
 
@@ -48,6 +49,7 @@ class StakeLeg:
     stake: float
     stake_pct: float
     profit_if_wins: float
+    line: float | None = None
     link: str | None = None
 
 
@@ -124,6 +126,7 @@ def split_stakes(best: list[BestPrice], total_stake: float = 1000.0) -> ArbResul
                 stake=round(stake, 2),
                 stake_pct=round(100.0 * ip / index, 4),
                 profit_if_wins=round(stake * p.odd - total_stake, 2),
+                line=p.line,
                 link=p.link,
             )
         )

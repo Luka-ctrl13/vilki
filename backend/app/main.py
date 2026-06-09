@@ -14,9 +14,12 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from pydantic import BaseModel
+
 from app.aggregator import Aggregator
 from app.arbitrage import BestPrice, evaluate_market
-from app.models import BookmakerOffer
+from app.betting import build_coordinator
+from app.models import BookmakerOffer, Surebet
 from app.parsers.demo import DemoParser
 from app.parsers.olimp import OlimpParser
 from app.parsers.onexbet import OneXBetParser
@@ -42,6 +45,11 @@ def build_aggregator() -> Aggregator:
 
 
 aggregator = build_aggregator()
+coordinator = build_coordinator()
+
+
+def _find_surebet(surebet_id: str) -> Surebet | None:
+    return next((s for s in aggregator.last_surebets if s.id == surebet_id), None)
 
 
 async def _refresh_loop() -> None:
@@ -150,6 +158,47 @@ async def calc(payload: dict):
         "total_stake": result.total_stake,
         "legs": [leg.__dict__ for leg in result.legs],
     }
+
+
+# --------------------------- bet automation API ---------------------------- #
+class PlaceRequest(BaseModel):
+    surebet_id: str
+    stake: float | None = None
+
+
+class ToggleRequest(BaseModel):
+    enabled: bool
+
+
+@app.get("/api/betting/status")
+async def betting_status():
+    return coordinator.status()
+
+
+@app.post("/api/betting/toggle")
+async def betting_toggle(req: ToggleRequest):
+    """Master kill-switch. Off by default; must be turned on to place anything."""
+    coordinator.risk.enabled = req.enabled
+    return coordinator.status()
+
+
+@app.post("/api/betting/place")
+async def betting_place(req: PlaceRequest):
+    """One-click placement of both legs of a detected surebet.
+
+    Paper mode simulates; real mode delegates to the configured executors.
+    Risk controls (kill-switch, min-profit, max-stake, de-dup) run first.
+    """
+    sb = _find_surebet(req.surebet_id)
+    if sb is None:
+        return {"error": "surebet not found or expired", "surebet_id": req.surebet_id}
+    bet = await coordinator.place_surebet(sb, stake=req.stake)
+    return bet.to_dict()
+
+
+@app.get("/api/betting/bets")
+async def betting_bets():
+    return {"bets": [b.to_dict() for b in coordinator.history]}
 
 
 # Serve the built React app (frontend/dist) from the same origin, so the whole

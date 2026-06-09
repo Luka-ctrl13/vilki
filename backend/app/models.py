@@ -14,12 +14,16 @@ from pydantic import BaseModel, Field
 class Selection(BaseModel):
     """A single possible outcome of a market with the odd a bookmaker gives it.
 
-    `name` is the normalized outcome label, e.g. "1" / "X" / "2" for football
-    1X2, or the player/team name for a two-way money line.
+    For totals/handicaps the `name` is the side ("Over"/"Under" for totals,
+    "H1"/"H2" for handicaps) and `line` is the threshold. The line is always
+    expressed from the home team's perspective for handicaps, so the same
+    real-world line lines up across bookmakers (Over 2.5 vs Over 2.5; Home -1.5
+    vs Away +1.5 both map to home line -1.5).
     """
 
     name: str
     odd: float = Field(gt=1.0, description="Decimal odd, must be > 1.0")
+    line: Optional[float] = Field(default=None, description="Total/handicap line, home-perspective")
 
 
 class BookmakerOffer(BaseModel):
@@ -48,6 +52,7 @@ class SurebetLeg(BaseModel):
     outcome: str
     bookmaker: str
     odd: float
+    line: Optional[float] = None
     implied_prob: float
     stake: float
     stake_pct: float
@@ -57,8 +62,10 @@ class SurebetLeg(BaseModel):
 class Surebet(BaseModel):
     """A detected arbitrage opportunity across bookmakers for one market of one event."""
 
+    id: str = Field(description="Stable id: event_key|market|line — used to reference a bet")
     sport: str
     market: str
+    line: Optional[float] = Field(default=None, description="Total/handicap line of this surebet")
     event_key: str
     home: str
     away: str

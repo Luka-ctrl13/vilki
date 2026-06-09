@@ -1,4 +1,4 @@
-"""Olimp (olimpbet.kz) live-odds parser.
+"""Olimp (olimpbet.kz) live-odds parser — totals and handicaps only.
 
 Reverse-engineered from the site's own public JSON API (no auth needed for the
 betting line, only a platform header):
@@ -7,30 +7,16 @@ betting line, only a platform header):
         ?locale=ru&sport-ids=100&live=true&page-size=N&statuses=OPEN&statuses=TRADING
     headers: x-platform: web-desktop
 
-Response shape (trimmed):
-    items: [
-      {
-        competitors: [{id, name, ...}, ...],
-        homeCompetitorIds: [id],
-        live: bool, eventDate: ISO,
-        tournament: {sportId, ...},
-        probabilities: {
-          markets: [
-            { marketId: 1000,                 # MATCH_WINNER_X3 == 1X2
-              probabilities: [
-                {outcomeTypeId: 1000, odd: 12.5},   # 1000 = П1 (home)
-                {outcomeTypeId: 1001, odd: 3.75},   # 1001 = Х  (draw)
-                {outcomeTypeId: 1002, odd: 1.36},   # 1002 = П2 (away)
-              ]
-            }, ...
-          ]
-        }
-      }, ...
-    ]
+Markets we read (verified against live data):
+    1003 TOTAL    -> outcome 1006 = Under (Меньше), 1007 = Over (Больше)
+                     each probability carries PARAMETER_VALUE = the line, e.g. "2.5"
+    1004 HANDICAP -> outcome 1008 = Ф1 (home), 1009 = Ф2 (away)
+                     PARAMETER_VALUE is the handicap, e.g. home "+1.0" / away "-1.0"
 
-We read market 1000 (and 1001/MATCH_WINNER_X2 is ignored) and emit a 1x2 /
-h2h offer per event. Two-competitor sports (tennis, table tennis, …) only
-carry П1/П2, which the engine handles as a 2-way market.
+A market can list several lines at once (1.5, 2.5, 3.5 …); we emit one
+selection per (side, line). Handicap lines are normalized to the home team's
+perspective so they line up with other bookmakers (home +1.0 and away -1.0
+both map to home line -1.0 → see base.normalize_handicap).
 """
 from __future__ import annotations
 
@@ -45,7 +31,6 @@ from app.parsers.base import BaseParser, make_event_key
 
 BASE = os.getenv("OLIMP_BASE_URL", "https://olimpbet.kz")
 
-# Olimp sportId -> our coarse sport bucket. Only sports we actually use for arbs.
 SPORT_BUCKETS = {
     100: "soccer",
     101: "tennis",
@@ -55,9 +40,24 @@ SPORT_BUCKETS = {
     110: "table_tennis",
 }
 
-# Market 1000 = MATCH_WINNER_X3 (1X2). outcomeTypeId -> our label.
-MARKET_1X2 = 1000
-OUTCOME_LABELS = {1000: "1", 1001: "X", 1002: "2"}
+# Market 1003 = TOTAL. outcomeTypeId -> side.
+TOTAL_MARKET = 1003
+TOTAL_SIDES = {1006: "Under", 1007: "Over"}
+
+# Market 1004 = HANDICAP. outcomeTypeId -> side (home / away).
+HANDICAP_MARKET = 1004
+HANDICAP_SIDES = {1008: "H1", 1009: "H2"}
+
+
+def _param_value(probability: dict) -> float | None:
+    """Pull PARAMETER_VALUE (the line) out of a probability's parameters."""
+    for p in probability.get("parameters", []) or []:
+        if p.get("type") == "PARAMETER_VALUE":
+            try:
+                return float(p.get("value"))
+            except (TypeError, ValueError):
+                return None
+    return None
 
 
 class OlimpParser(BaseParser):
@@ -66,7 +66,6 @@ class OlimpParser(BaseParser):
     def __init__(self, page_size: int = 40, timeout: float = 15.0, concurrency: int = 3):
         self.page_size = page_size
         self.timeout = timeout
-        # Polite concurrency cap so we never hammer the bookmaker.
         self._sem = asyncio.Semaphore(concurrency)
         self.enabled = os.getenv("OLIMP_ENABLED", "1") != "0"
 
@@ -86,7 +85,7 @@ class OlimpParser(BaseParser):
         if not self.enabled:
             return []
         async with httpx.AsyncClient(timeout=self.timeout, headers=self._headers) as client:
-            tasks = [self._fetch_sport(client, sid, bucket) for sid, bucket in SPORT_BUCKETS.items()]
+            tasks = [self._fetch_sport(client, sid, b) for sid, b in SPORT_BUCKETS.items()]
             results = await asyncio.gather(*tasks, return_exceptions=True)
         offers: list[BookmakerOffer] = []
         for r in results:
@@ -123,39 +122,65 @@ class OlimpParser(BaseParser):
             home_ids = set(ev.get("homeCompetitorIds") or [])
             home = next((c["name"] for c in competitors if c.get("id") in home_ids), competitors[0]["name"])
             away = next((c["name"] for c in competitors if c.get("id") not in home_ids), competitors[1]["name"])
+            event_key = make_event_key(bucket, home, away)
+            markets = {m.get("marketId"): m for m in ev.get("probabilities", {}).get("markets", [])}
+            start = self._parse_time(ev.get("eventDate"))
+            is_live = bool(ev.get("live"))
+            ev_id = ev.get("id")
 
-            sels = self._extract_1x2(ev.get("probabilities") or {})
-            if len(sels) < 2:
-                continue
-
-            offers.append(
-                BookmakerOffer(
-                    bookmaker="Olimp",
-                    sport=bucket,
-                    market="1x2",
-                    event_key=make_event_key(bucket, home, away),
-                    home=home,
-                    away=away,
-                    start_time=self._parse_time(ev.get("eventDate")),
-                    is_live=bool(ev.get("live")),
-                    selections=sels,
-                    link=f"{BASE}/live/event/{ev.get('id')}",
+            totals = self._extract_totals(markets.get(TOTAL_MARKET))
+            if len(totals) >= 2:
+                offers.append(
+                    self._offer("totals", bucket, event_key, home, away, start, is_live, totals, ev_id)
                 )
-            )
+            handicaps = self._extract_handicaps(markets.get(HANDICAP_MARKET))
+            if len(handicaps) >= 2:
+                offers.append(
+                    self._offer("handicap", bucket, event_key, home, away, start, is_live, handicaps, ev_id)
+                )
         return offers
 
+    def _offer(self, market, bucket, key, home, away, start, live, sels, ev_id) -> BookmakerOffer:
+        return BookmakerOffer(
+            bookmaker="Olimp",
+            sport=bucket,
+            market=market,
+            event_key=key,
+            home=home,
+            away=away,
+            start_time=start,
+            is_live=live,
+            selections=sels,
+            link=f"{BASE}/live/event/{ev_id}",
+        )
+
     @staticmethod
-    def _extract_1x2(probabilities: dict) -> list[Selection]:
+    def _extract_totals(market: dict | None) -> list[Selection]:
+        if not market:
+            return []
         sels: list[Selection] = []
-        for market in probabilities.get("markets", []):
-            if market.get("marketId") != MARKET_1X2:
+        for p in market.get("probabilities", []):
+            side = TOTAL_SIDES.get(p.get("outcomeTypeId"))
+            odd = p.get("odd")
+            line = _param_value(p)
+            if side and line is not None and isinstance(odd, (int, float)) and odd > 1.0:
+                sels.append(Selection(name=side, odd=float(odd), line=line))
+        return sels
+
+    @staticmethod
+    def _extract_handicaps(market: dict | None) -> list[Selection]:
+        if not market:
+            return []
+        sels: list[Selection] = []
+        for p in market.get("probabilities", []):
+            side = HANDICAP_SIDES.get(p.get("outcomeTypeId"))
+            odd = p.get("odd")
+            value = _param_value(p)
+            if not side or value is None or not isinstance(odd, (int, float)) or odd <= 1.0:
                 continue
-            for p in market.get("probabilities", []):
-                label = OUTCOME_LABELS.get(p.get("outcomeTypeId"))
-                odd = p.get("odd")
-                if label and isinstance(odd, (int, float)) and odd > 1.0:
-                    sels.append(Selection(name=label, odd=float(odd)))
-            break
+            # Normalize to home perspective: away handicap h means home line -h.
+            line = value if side == "H1" else -value
+            sels.append(Selection(name=side, odd=float(odd), line=round(line, 2)))
         return sels
 
     @staticmethod
