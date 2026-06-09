@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Surebet Scanner — 1xBet × Olimp</title>
+<title>Surebet Scanner — Fonbet × Olimp</title>
 <style>
   :root{--bg:#0e1320;--pan:#161d2e;--pan2:#1d2740;--line:#2a3552;--mut:#8a97b3;--acc:#36d399;--acc2:#5b8cff;--live:#ff5b7f;--warn:#f5c451}
   *{box-sizing:border-box}
@@ -36,7 +36,7 @@
 <div class="top">
   <h1>⚡ Surebet Scanner</h1>
   <div class="stats">
-    <div class="stat"><b id="c1x">0</b><span>1xBet</span></div>
+    <div class="stat"><b id="cfb">0</b><span>Fonbet</span></div>
     <div class="stat"><b id="cf" style="color:var(--acc)">0</b><span>Вилок</span></div>
     <div class="stat"><b id="col">0</b><span>Olimp</span></div>
   </div>
@@ -47,7 +47,7 @@
 </div>
 
 <div class="grid">
-  <div class="col"><div class="col-title" style="color:var(--acc2)">1xBet</div><div id="l1x"></div></div>
+  <div class="col"><div class="col-title" style="color:var(--acc2)">Fonbet</div><div id="lfb"></div></div>
   <div class="col"><div class="col-title" style="color:var(--acc)">Вилки</div><div id="lf"></div></div>
   <div class="col"><div class="col-title" style="color:var(--live)">Olimp</div><div id="lol"></div></div>
 </div>
@@ -63,10 +63,10 @@ async function tick(){
       fetch('/api/all-events').then(r=>r.json()),
     ]);
     forks = f;
-    document.getElementById('c1x').innerText = all.xbetCount;
+    document.getElementById('cfb').innerText = all.fonbetCount;
     document.getElementById('col').innerText = all.olimpCount;
     document.getElementById('cf').innerText = f.length;
-    document.getElementById('l1x').innerHTML = (all.xbet||[]).map(rawRow).join('') || muted('нет данных (геоблок IP?)');
+    document.getElementById('lfb').innerHTML = (all.fonbet||[]).map(rawRow).join('') || muted('нет данных');
     document.getElementById('lol').innerHTML = (all.olimp||[]).map(rawRow).join('') || muted('нет данных');
     renderForks();
   }catch(e){}

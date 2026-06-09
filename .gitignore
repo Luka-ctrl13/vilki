@@ -2,9 +2,7 @@
 node_modules/
 npm-debug.log*
 
-# Puppeteer login profiles (contain your bookmaker sessions — never commit)
-.profile-1xbet/
-.profile-olimp/
+# Browser profiles (if any)
 .profile-*/
 
 # Runtime data

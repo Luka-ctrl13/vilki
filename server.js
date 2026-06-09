@@ -1,8 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const path = require("path");
 
-const parser1xbet = require("./scrapers/parser1xbet");
+const parserFonbet = require("./scrapers/parserFonbet");
 const parserOlimp = require("./scrapers/parserOlimp");
 const { sameEvent } = require("./lib/match");
 const arb = require("./lib/arb");
@@ -17,13 +16,16 @@ const DEFAULT_STAKE = Number(process.env.DEFAULT_STAKE || 10000);
 const SCAN_MS = Number(process.env.SCAN_MS || 5000);
 const MIN_DISPLAY_PROFIT = Number(process.env.MIN_DISPLAY_PROFIT || 0); // show forks >= this %
 
-let liveData = { xbet: [], olimp: [] };
+const BOOK_A = "Fonbet";
+const BOOK_B = "Olimp";
+
+let liveData = { fonbet: [], olimp: [] };
 let lastForks = [];
-let busy = { xbet: false, olimp: false };
+let busy = { fonbet: false, olimp: false };
 
 // ----------------------------- scraping loop ------------------------------ //
 function startScraping() {
-  console.log("Запуск сканера…");
+  console.log("Запуск сканера (Fonbet × Olimp)…");
   const loop = (key, parser) =>
     setInterval(async () => {
       if (busy[key]) return;
@@ -38,38 +40,13 @@ function startScraping() {
       }
     }, SCAN_MS);
 
+  loop("fonbet", parserFonbet);
   loop("olimp", parserOlimp);
-
-  if (process.env.DEV_FAKE_XBET) {
-    // Dev only: synthesize a "1xBet" feed from live Olimp data with jittered odds
-    // so the matching/fork/betting pipeline can be demonstrated where 1xBet is
-    // geo-blocked. Never use in production.
-    console.warn("DEV_FAKE_XBET on — 1xBet feed is SIMULATED from Olimp data.");
-    setInterval(() => { liveData.xbet = makeFakeXbet(liveData.olimp); }, SCAN_MS);
-  } else {
-    loop("xbet", parser1xbet);
-  }
-}
-
-function jitter(odd, amp) {
-  const v = odd * (1 + (Math.random() * 2 - 1) * amp);
-  return Math.round(Math.max(1.02, v) * 100) / 100;
-}
-
-function makeFakeXbet(olimp) {
-  return (olimp || []).map((e) => ({
-    team1: e.team1, team2: e.team2, sport: e.sport, live: e.live,
-    link: "https://1xbet.kz/ru/live/" + Math.floor(Math.random() * 1e6),
-    totals: e.totals.map((t) => ({ val: t.val, over: jitter(t.over, 0.08), under: jitter(t.under, 0.08) })),
-    handicaps: e.handicaps.map((h) => ({
-      param1: h.param1, kf1: jitter(h.kf1, 0.08), param2: h.param2, kf2: jitter(h.kf2, 0.08),
-    })),
-  }));
 }
 
 // ------------------------------ fork finding ------------------------------ //
-// Express each event's handicaps in xbet-team perspective: selections for team1
-// and team2 with their own line and odd.
+// Express each event's handicaps in book-A team perspective: selections for
+// team1 and team2 with their own line and odd.
 function handicapSelections(ev, reversed) {
   const t1 = [], t2 = [];
   for (const h of ev.handicaps || []) {
@@ -81,13 +58,11 @@ function handicapSelections(ev, reversed) {
 
 function findForks() {
   const forks = [];
-  const { xbet, olimp } = liveData;
-  if (!xbet.length || !olimp.length) return [];
+  const a = liveData.fonbet, b = liveData.olimp;
+  if (!a.length || !b.length) return [];
 
-  for (const e1 of xbet) {
-    const cand = olimp
-      .map((e2) => ({ e2, m: sameEvent(e1, e2) }))
-      .find((x) => x.m.match);
+  for (const e1 of a) {
+    const cand = b.map((e2) => ({ e2, m: sameEvent(e1, e2) })).find((x) => x.m.match);
     if (!cand) continue;
     const e2 = cand.e2;
     const reversed = cand.m.reversed;
@@ -98,26 +73,26 @@ function findForks() {
       for (const to of e2.totals || []) {
         if (Math.abs(tx.val - to.val) > 1e-6) continue;
         addFork(forks, e1, e2, "total", tx.val, match,
-          { book: "1xBet", outcome: `ТБ(${tx.val})`, side: "over", line: tx.val, odd: tx.over, link: e1.link },
-          { book: "Olimp", outcome: `ТМ(${to.val})`, side: "under", line: to.val, odd: to.under, link: e2.link });
+          { book: BOOK_A, outcome: `ТБ(${tx.val})`, side: "over", line: tx.val, odd: tx.over, link: e1.link },
+          { book: BOOK_B, outcome: `ТМ(${to.val})`, side: "under", line: to.val, odd: to.under, link: e2.link });
         addFork(forks, e1, e2, "total", tx.val, match,
-          { book: "1xBet", outcome: `ТМ(${tx.val})`, side: "under", line: tx.val, odd: tx.under, link: e1.link },
-          { book: "Olimp", outcome: `ТБ(${to.val})`, side: "over", line: to.val, odd: to.over, link: e2.link });
+          { book: BOOK_A, outcome: `ТМ(${tx.val})`, side: "under", line: tx.val, odd: tx.under, link: e1.link },
+          { book: BOOK_B, outcome: `ТБ(${to.val})`, side: "over", line: to.val, odd: to.over, link: e2.link });
       }
     }
 
     // ---- Handicaps: team1 +L @A and team2 -L @B (complementary lines) ----
     const x = handicapSelections(e1, false);
     const o = handicapSelections(e2, reversed);
-    pairHandicaps(forks, e1, e2, match, x.team1, o.team2, "1xBet", "Olimp", e1.link, e2.link, true);
-    pairHandicaps(forks, e1, e2, match, o.team1, x.team2, "Olimp", "1xBet", e2.link, e1.link, false);
+    pairHandicaps(forks, e1, e2, match, x.team1, o.team2, BOOK_A, BOOK_B, e1.link, e2.link);
+    pairHandicaps(forks, e1, e2, match, o.team1, x.team2, BOOK_B, BOOK_A, e2.link, e1.link);
   }
 
-  return forks.sort((a, b) => b.profit - a.profit);
+  return forks.sort((f1, f2) => f2.profit - f1.profit);
 }
 
 // team1 selections at book A vs team2 selections at book B, complementary lines.
-function pairHandicaps(forks, e1, e2, match, t1Sels, t2Sels, bookA, bookB, linkA, linkB, t1IsA) {
+function pairHandicaps(forks, e1, e2, match, t1Sels, t2Sels, bookA, bookB, linkA, linkB) {
   for (const a of t1Sels) {
     for (const b of t2Sels) {
       if (Math.abs(a.line + b.line) > 0.1) continue;
@@ -139,8 +114,7 @@ function addFork(forks, e1, e2, marketType, line, match, legA, legB) {
   legB = { ...legB, odd: k2, stake: split.stake2, stakePct: Math.round((100 / k2 / arb.arbIndex(k1, k2)) * 10) / 10 };
 
   const id = `${match}|${marketType}|${line}|${legA.outcome}/${legB.outcome}`;
-  // De-dup identical opportunities within one scan.
-  if (forks.some((f) => f.id === id)) return;
+  if (forks.some((f) => f.id === id)) return; // de-dup within one scan
 
   forks.push({
     id,
@@ -163,15 +137,14 @@ app.get("/api/forks", (req, res) => {
 
 app.get("/api/all-events", (req, res) =>
   res.json({
-    xbetCount: liveData.xbet.length,
+    fonbetCount: liveData.fonbet.length,
     olimpCount: liveData.olimp.length,
-    xbet: liveData.xbet,
+    fonbet: liveData.fonbet,
     olimp: liveData.olimp,
   })
 );
 
-// Only boot the HTTP server + scrapers when run directly (`node server.js`),
-// not when imported by tests.
+// Boot the server + scrapers only when run directly (not when imported by tests).
 if (require.main === module) {
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Сервер: http://localhost:${PORT}`);
