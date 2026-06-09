@@ -18,15 +18,26 @@ from app.aggregator import Aggregator
 from app.arbitrage import BestPrice, evaluate_market
 from app.models import BookmakerOffer
 from app.parsers.demo import DemoParser
-from app.parsers.the_odds_api import TheOddsApiParser
+from app.parsers.olimp import OlimpParser
+from app.parsers.onexbet import OneXBetParser
 
 REFRESH_SECONDS = int(os.getenv("REFRESH_SECONDS", "20"))
 DEFAULT_STAKE = float(os.getenv("DEFAULT_STAKE", "1000"))
+# Keep the demo parser on as a fallback only when explicitly enabled, so the UI
+# isn't empty if both bookmakers are blocked. Off by default for real data.
+DEMO_FALLBACK = os.getenv("DEMO_FALLBACK", "0") != "0"
 
 
 def build_aggregator() -> Aggregator:
-    """Assemble the parser set. The real parser self-disables without an API key."""
-    parsers = [TheOddsApiParser(), DemoParser(arb_ratio=0.4)]
+    """Assemble the parser set: real bookmaker scrapers (Olimp + 1xbet).
+
+    Arbitrage needs the same event priced by both books, so both run together.
+    Each parser fails safe (returns nothing on geo-block / error) and can be
+    toggled via OLIMP_ENABLED / ONEXBET_ENABLED.
+    """
+    parsers: list = [OlimpParser(), OneXBetParser()]
+    if DEMO_FALLBACK:
+        parsers.append(DemoParser(arb_ratio=0.4))
     return Aggregator(parsers, default_stake=DEFAULT_STAKE)
 
 

@@ -67,6 +67,9 @@ body {
 .banner.error { background: #3a1622; border: 1px solid #7a2440; color: #ffb3c4; }
 .banner.info { background: #1e2742; border: 1px solid var(--line); color: var(--muted); }
 .banner code { color: var(--warn); }
+.src { margin-right: 12px; }
+.src.on code { color: var(--accent); }
+.src.off code { color: var(--live); }
 
 .grid {
   display: grid; gap: 16px;

@@ -127,11 +127,16 @@ export default function App() {
       </section>
 
       {error && <div className="banner error">Ошибка: {error}</div>}
-      {health && !health.parsers?.some((p) => p.name === "the_odds_api" && p.enabled) && (
+      {health && (
         <div className="banner info">
-          Реальный источник <code>the_odds_api</code> выключен — нет ключа. Сейчас данные с
-          демо-парсера. Добавь <code>THE_ODDS_API_KEY</code> в env, чтобы включить live-кэфы реальных
-          букмекеров.
+          Источники:{" "}
+          {health.parsers?.map((p) => (
+            <span key={p.name} className={`src ${p.enabled ? "on" : "off"}`}>
+              <code>{p.name}</code> {p.enabled ? "вкл" : "выкл"}
+            </span>
+          ))}
+          {health.offers === 0 &&
+            " — букмекеры не отдали данные (возможна геоблокировка IP). Запусти бэкенд из разрешённого региона или включи DEMO_FALLBACK=1."}
         </div>
       )}
 
