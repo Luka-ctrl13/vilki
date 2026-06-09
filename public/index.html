@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surebet Scanner — 1xBet × Olimp</title>
+<style>
+  :root{--bg:#0e1320;--pan:#161d2e;--pan2:#1d2740;--line:#2a3552;--mut:#8a97b3;--acc:#36d399;--acc2:#5b8cff;--live:#ff5b7f;--warn:#f5c451}
+  *{box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:#e7ecf6;margin:0;padding:18px}
+  h1{margin:0;font-size:22px}
+  .top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+  .stats{display:flex;gap:10px;margin-left:auto}
+  .stat{background:var(--pan);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center;min-width:90px}
+  .stat b{font-size:20px;display:block}
+  .stat span{font-size:11px;color:var(--mut)}
+  .betbar{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:14px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .mode{font-weight:800;font-size:12px;padding:5px 12px;border-radius:8px}
+  .mode.paper{background:rgba(91,140,255,.15);color:var(--acc2)} .mode.real{background:rgba(255,91,127,.18);color:var(--live)}
+  .switch{display:flex;align-items:center;gap:8px;cursor:pointer;font-weight:600}
+  .switch input{width:18px;height:18px;accent-color:var(--acc)}
+  .meta{color:var(--mut);font-size:12px}
+  .stake-in{margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--mut);font-size:13px}
+  .stake-in input{background:var(--pan2);border:1px solid var(--line);color:#fff;border-radius:8px;padding:7px 10px;width:120px}
+  .grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:16px}
+  .col{background:var(--pan);border:1px solid var(--line);border-radius:12px;padding:12px;height:78vh;overflow-y:auto}
+  .col-title{text-align:center;border-bottom:1px solid var(--line);padding-bottom:8px;margin-bottom:10px;font-size:15px}
+  .raw{padding:7px 4px;border-bottom:1px solid #222c44;font-size:12px;color:#abb6d0;display:flex;justify-content:space-between;gap:8px}
+  .tag{background:var(--pan2);padding:1px 6px;border-radius:4px;color:var(--warn);font-size:11px;display:inline-block;margin:1px 0}
+  .fork{background:var(--pan2);border-left:4px solid #555;border-radius:8px;padding:10px;margin-bottom:9px}
+  .fork.plus{border-left-color:var(--acc)} .fork.minus{border-left-color:var(--live)}
+  .fork-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .fork-m{font-size:12px;color:var(--mut);margin:3px 0}
+  .prof{font-weight:800} .prof.p{color:var(--acc)} .prof.n{color:var(--live)}
+  .legs{display:flex;flex-direction:column;gap:5px;margin:7px 0}
+  .leg{display:grid;grid-template-columns:54px 1fr auto auto;gap:8px;align-items:center;font-size:13px;background:#16203a;border-radius:6px;padding:6px 8px}
+  .leg b{color:var(--acc2)} .leg .k{font-weight:700} .leg .st{font-weight:700;text-align:right}
+  .leg a{color:#cfd7ec;text-decoration:none;border-bottom:1px dashed var(--mut)}
+  .fork-f{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px}
+  .bet{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#04121d;border:0;border-radius:8px;padding:6px 14px;font-weight:700;cursor:pointer;font-size:13px}
+  .bet:disabled{opacity:.45;cursor:not-allowed}
+  .res{margin-top:7px;font-size:12px;padding:7px 9px;border-radius:6px}
+  .res.ok{background:rgba(54,211,153,.12);border:1px solid #2c6;color:var(--acc)}
+  .res.warn{background:#3a2a16;border:1px solid #7a5a24;color:var(--warn)}
+  .res.bad{background:#3a1622;border:1px solid #7a2440;color:#ffb3c4}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>⚡ Surebet Scanner</h1>
+  <div class="stats">
+    <div class="stat"><b id="c1x">0</b><span>1xBet</span></div>
+    <div class="stat"><b id="cf" style="color:var(--acc)">0</b><span>Вилок</span></div>
+    <div class="stat"><b id="col">0</b><span>Olimp</span></div>
+  </div>
+</div>
+
+<div class="betbar">
+  <div class="mode" id="mode">—</div>
+  <label class="switch"><input type="checkbox" id="toggle"><span id="toggle-l">Автоставки</span></label>
+  <span class="meta" id="bmeta"></span>
+  <div class="stake-in">Банк, ₽ <input type="number" id="stake" value="10000"></div>
+</div>
+
+<div class="grid">
+  <div class="col"><div class="col-title" style="color:var(--acc2)">1xBet</div><div id="l1x"></div></div>
+  <div class="col"><div class="col-title" style="color:var(--acc)">Вилки</div><div id="lf"></div></div>
+  <div class="col"><div class="col-title" style="color:var(--live)">Olimp</div><div id="lol"></div></div>
+</div>
+
+<script>
+let forks = [], betting = null;
+tick(); setInterval(tick, 3000);
+
+document.getElementById('toggle').addEventListener('change', async e => {
+  betting = await post('/api/betting/toggle', { enabled: e.target.checked });
+  renderBetbar();
+});
+
+async function tick(){
+  try{
+    const [f, all, st] = await Promise.all([
+      fetch('/api/forks').then(r=>r.json()),
+      fetch('/api/all-events').then(r=>r.json()),
+      fetch('/api/betting/status').then(r=>r.json()),
+    ]);
+    forks = f; betting = st;
+    document.getElementById('c1x').innerText = all.xbetCount;
+    document.getElementById('col').innerText = all.olimpCount;
+    document.getElementById('cf').innerText = f.length;
+    renderBetbar();
+    document.getElementById('l1x').innerHTML = (all.xbet||[]).map(rawRow).join('') || muted('нет данных (геоблок IP?)');
+    document.getElementById('lol').innerHTML = (all.olimp||[]).map(rawRow).join('') || muted('нет данных');
+    renderForks();
+  }catch(e){}
+}
+
+function renderBetbar(){
+  if(!betting) return;
+  const real = betting.mode === 'real';
+  const m = document.getElementById('mode');
+  m.className = 'mode ' + (real?'real':'paper');
+  m.innerText = real ? 'РЕАЛЬНЫЕ СТАВКИ' : 'СИМУЛЯЦИЯ (paper)';
+  document.getElementById('toggle').checked = !!betting.enabled;
+  document.getElementById('toggle-l').innerText = 'Автоставки ' + (betting.enabled?'включены':'выключены');
+  document.getElementById('bmeta').innerText =
+    `мин. прибыль ${betting.minProfit}% · макс. ставка ${betting.maxStake} ₽ · поставлено ${betting.placedCount}`;
+}
+
+function rawRow(e){
+  let c='';
+  (e.totals||[]).slice(0,2).forEach(t=>c+=`<span class="tag">Т(${t.val}) ${t.over}/${t.under}</span> `);
+  (e.handicaps||[]).slice(0,2).forEach(h=>c+=`<span class="tag">Ф(${h.param1}/${h.param2}) ${h.kf1}/${h.kf2}</span> `);
+  return `<div class="raw"><div style="max-width:45%">${e.team1}<br>${e.team2}</div><div style="text-align:right">${c||'<span style="color:#556">—</span>'}</div></div>`;
+}
+
+function renderForks(){
+  const canBet = !!(betting && betting.enabled);
+  document.getElementById('lf').innerHTML = forks.map(f=>{
+    const p = +f.profit, cls = p>0?'plus':'minus';
+    const legs = f.legs.map(l=>`
+      <div class="leg"><b>${l.book}</b><span>${l.outcome}</span><span class="k">${l.odd}</span>
+      <span class="st"><a href="${l.link}" target="_blank">${Math.round(l.stake)} ₽</a></span></div>`).join('');
+    return `<div class="fork ${cls}" id="fk_${cssId(f.id)}">
+      <div class="fork-h"><div style="font-weight:700">${f.match}</div>
+        <span class="prof ${p>0?'p':'n'}">${p>0?'+':''}${f.profit}%</span></div>
+      <div class="fork-m">${f.sport||''} · ${f.market}</div>
+      <div class="legs">${legs}</div>
+      <div class="fork-f"><span style="color:var(--mut);font-size:12px">индекс ${f.index}</span>
+        <button class="bet" ${canBet?'':'disabled'} onclick="place('${encodeURIComponent(f.id)}')">Поставить</button></div>
+      <div class="res-slot"></div>
+    </div>`;
+  }).join('') || muted('вилок нет (нужны оба букмекера)');
+}
+
+async function place(encId){
+  const id = decodeURIComponent(encId);
+  const stake = +document.getElementById('stake').value || undefined;
+  const slot = document.querySelector('#fk_'+cssId(id)+' .res-slot');
+  if(slot) slot.innerHTML = '<div class="res">Ставлю…</div>';
+  const bet = await post('/api/betting/place', { forkId:id, stake });
+  if(!slot) return;
+  const map = { SIMULATED:['ok','Симуляция: проставлено (paper)'], PLACED:['ok','Проставлено'],
+    PARTIAL:['warn','⚠ Не захеджировано — часть ног!'], REJECTED:['bad','Отклонено'] };
+  const [c,t] = map[bet.status] || ['bad','Ошибка'];
+  const legs = (bet.legs||[]).map(l=>`${l.book}: ${l.ok?'✓':'✗'} ${l.message||''}`).join('<br>');
+  slot.innerHTML = `<div class="res ${c}"><b>${t}</b>${bet.note?'<br>'+bet.note:''}${legs?'<br>'+legs:''}</div>`;
+}
+
+const post = (u,b)=>fetch(u,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(r=>r.json());
+const muted = t=>`<div style="color:#556;text-align:center;padding:20px">${t}</div>`;
+const cssId = s=>s.replace(/[^a-z0-9]/gi,'_');
+</script>
+</body>
+</html>

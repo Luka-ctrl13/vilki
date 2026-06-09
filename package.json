@@ -1,0 +1,17 @@
+{
+  "name": "arb-scanner",
+  "version": "2.0.0",
+  "description": "Live surebet scanner (1xBet + Olimp) with one-click bet automation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "puppeteer": "^24.36.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

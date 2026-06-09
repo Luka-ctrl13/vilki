@@ -1,23 +1,17 @@
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-*.egg-info/
-.pytest_cache/
-
 # Node
 node_modules/
-frontend/dist/
+npm-debug.log*
 
-# Data snapshots produced at runtime
-backend/data/*.json
+# Puppeteer login profiles (contain your bookmaker sessions — never commit)
+.profile-1xbet/
+.profile-olimp/
+.profile-*/
 
-# Env / secrets
-.env
-*.local
+# Runtime data
+data/*.json
 
 # OS / editor
 .DS_Store
 .idea/
 .vscode/
+.env
